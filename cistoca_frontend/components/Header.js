@@ -1,17 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react';
 import logo from '../public/images/cistoca_logo.svg';
 import LoginModal from './LoginModal';
 
 const Header = () => {
   return(
 	<div className='flex flex-row justify-between'>
-		<Image className='ml-10' src={logo} width='470px' height='105px'/>
+		<Link href={'/'} className='flex align-middle'>
+			<Image className='ml-10 h-auto' src={logo}/>
+		</Link>
 		<div className='flex flex-row justify-evenly bg-[#9DEC8F] rounded-bl-full'>
 			<NavbarLink path={'/servicePage'} linkName={'Usluge'}></NavbarLink>
-			<NavbarLink path={'/'} linkName={'Edukacija'}></NavbarLink>
-			<NavbarLink path={'/'} linkName={'Informacije'}></NavbarLink>
+			<NavbarLink path={'/educationPage'} linkName={'Edukacija'}></NavbarLink>
+			<NavbarLink path={'/infoPage'} linkName={'Informacije'}></NavbarLink>
 			<LoginModal/>
 		</div>
 	</div>

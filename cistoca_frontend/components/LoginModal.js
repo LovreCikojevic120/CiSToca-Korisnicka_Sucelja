@@ -1,13 +1,22 @@
 import { useState } from "react";
+import { getUser } from "../services/loginService";
 
 export default function Modal() {
   const [showModal, setShowModal] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [logged, setLogged] = useState(false);
   const [userData, setUserData] = useState({name:null, lastname:null});
 
-  const handleLogin = (e) => {
+  const handleLogin = () => {
+    let user = getUser(userData);
+    if(!user){
+      setShowError(true);
+      setTimeout(()=>setShowError(false), 3000);
+      return;
+    }
+
     setShowModal(false);
-    console.log(userData)
-    // after logging set data to null
+    setLogged(true);
   }
 
   const handleCancel = () => {
@@ -15,15 +24,31 @@ export default function Modal() {
     setUserData({name:null, lastname:null});
   }
 
+  const handleLogout = () => {
+    setLogged(false);
+    setUserData({name:null, lastname:null});
+  }
+
   return (
     <>
-      <button
+      {logged ? 
+      <div className="self-center mr-2">
+        <button
+        className="bg-red-500 text-white active:bg-red-500 text-sm px-6 py-3 rounded shadow outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        type="button"
+        onClick={handleLogout}>
+          Odjava
+        </button>
+      </div> : 
+      <div className="self-center mr-2">
+        <button
         className="bg-[#1D7110] text-white active:bg-[#1D7110] text-sm px-6 py-3 rounded shadow outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
-        onClick={() => setShowModal(true)}
-      >
-        Prijavi se
-      </button>
+        onClick={() => setShowModal(true)}>
+          Prijavi se
+        </button>
+      </div>}
+      
       {showModal ? (
         <>
           <div
@@ -45,8 +70,9 @@ export default function Modal() {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex flex-col">
-                  <input placeholder="Ime" className="mb-4 w-2/3" onChange={(e) => setUserData({name: e.target.value, lastname:userData.lastname})}></input>
-                  <input placeholder="Prezime" className="w-2/3" onChange={(e) => setUserData({name: userData.name, lastname:e.target.value})}></input>
+                  <input placeholder="Ime" className="w-2/3" onChange={(e) => setUserData({name: e.target.value, lastname:userData.lastname})}></input>
+                  <input placeholder="Prezime" className="mt-4 w-2/3" onChange={(e) => setUserData({name: userData.name, lastname:e.target.value})}></input>
+                  {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivo ime ili prezime</div> : null}
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">

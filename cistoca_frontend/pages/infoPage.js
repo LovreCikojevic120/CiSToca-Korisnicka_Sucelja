@@ -1,14 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const servicePage = () => {
+const infoPage = () => {
   return(
     <>
     <Header/>
-    <h1>USLUGE</h1>
+    <h1>INFORMACIJE</h1>
     <Footer/>
     </>
   )
 }
 
-export default servicePage;
+export default infoPage;
