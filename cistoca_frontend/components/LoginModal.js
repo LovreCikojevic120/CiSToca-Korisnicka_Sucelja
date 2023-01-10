@@ -2,6 +2,19 @@ import { useState } from "react";
 
 export default function Modal() {
   const [showModal, setShowModal] = useState(false);
+  const [userData, setUserData] = useState({name:null, lastname:null});
+
+  const handleLogin = (e) => {
+    setShowModal(false);
+    console.log(userData)
+    // after logging set data to null
+  }
+
+  const handleCancel = () => {
+    setShowModal(false);
+    setUserData({name:null, lastname:null});
+  }
+
   return (
     <>
       <button
@@ -31,23 +44,23 @@ export default function Modal() {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
-                  <input placeholder="Ime"></input>
-                  <input placeholder="Prezime"></input>
+                <div className="relative p-6 flex flex-col">
+                  <input placeholder="Ime" className="mb-4 w-2/3" onChange={(e) => setUserData({name: e.target.value, lastname:userData.lastname})}></input>
+                  <input placeholder="Prezime" className="w-2/3" onChange={(e) => setUserData({name: userData.name, lastname:e.target.value})}></input>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={handleLogin}
                   >
                     Prijava
                   </button>
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={handleCancel}
                   >
                     Odustani
                   </button>
