@@ -1,11 +1,23 @@
-import { useState } from "react";
-import { getUser } from "../services/loginService";
+import { useState, useLayoutEffect } from "react";
+import { getUser, setCurrentUser, getCurrentUser } from "../services/loginService";
 
 export default function Modal() {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [logged, setLogged] = useState(false);
   const [userData, setUserData] = useState({name:null, lastname:null});
+
+  useLayoutEffect(() => {
+    updateData();
+  }, []);
+
+  const updateData = () => {
+    let user = getCurrentUser();
+    if(!user) return;
+
+    setUserData(user);
+    setLogged(true);
+  }
 
   const handleLogin = () => {
     let user = getUser(userData);
@@ -17,6 +29,7 @@ export default function Modal() {
 
     setShowModal(false);
     setLogged(true);
+    setCurrentUser(userData);
   }
 
   const handleCancel = () => {
@@ -27,6 +40,7 @@ export default function Modal() {
   const handleLogout = () => {
     setLogged(false);
     setUserData({name:null, lastname:null});
+    setCurrentUser(null);
   }
 
   return (
@@ -34,7 +48,7 @@ export default function Modal() {
       {logged ? 
       <div className="self-center mr-2">
         <button
-        className="bg-red-500 text-white active:bg-red-500 text-sm px-6 py-3 rounded shadow outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
         type="button"
         onClick={handleLogout}>
           Odjava
@@ -42,7 +56,7 @@ export default function Modal() {
       </div> : 
       <div className="self-center mr-2">
         <button
-        className="bg-[#1D7110] text-white active:bg-[#1D7110] text-sm px-6 py-3 rounded shadow outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="bg-[#1D7110] text-white active:bg-[#1D7110] text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
         type="button"
         onClick={() => setShowModal(true)}>
           Prijavi se
