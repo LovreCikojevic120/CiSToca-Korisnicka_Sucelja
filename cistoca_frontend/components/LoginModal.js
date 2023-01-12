@@ -32,11 +32,6 @@ export default function Modal() {
     setCurrentUser(userData);
   }
 
-  const handleCancel = () => {
-    setShowModal(false);
-    setUserData({name:null, lastname:null});
-  }
-
   const handleLogout = () => {
     setLogged(false);
     setUserData({name:null, lastname:null});
@@ -76,11 +71,6 @@ export default function Modal() {
                   <h3 className="text-3xl font-semibold">
                     Unesite podatke za prijavu
                   </h3>
-                  <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                  </button>
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex flex-col">
@@ -100,7 +90,7 @@ export default function Modal() {
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={handleCancel}
+                    onClick={() => setShowModal(false)}
                   >
                     Odustani
                   </button>
