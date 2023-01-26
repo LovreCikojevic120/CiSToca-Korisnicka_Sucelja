@@ -1,7 +1,7 @@
 import { useState, useLayoutEffect } from "react";
 import { getUser, setCurrentUser, getCurrentUser } from "../services/loginService";
 
-export default function Modal() {
+export default function LoginModal({isNewPostBtn}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [logged, setLogged] = useState(false);
@@ -17,6 +17,8 @@ export default function Modal() {
 
     setUserData(user);
     setLogged(true);
+
+    if(isNewPostBtn) isNewPostBtn(true);
   }
 
   const handleLogin = () => {
@@ -29,11 +31,15 @@ export default function Modal() {
 
     setShowModal(false);
     setLogged(true);
+
+    if(isNewPostBtn) isNewPostBtn(true);
     setCurrentUser(userData);
   }
 
   const handleLogout = () => {
     setLogged(false);
+
+    if(isNewPostBtn) isNewPostBtn(false);
     setUserData({name:null, lastname:null});
     setCurrentUser(null);
   }

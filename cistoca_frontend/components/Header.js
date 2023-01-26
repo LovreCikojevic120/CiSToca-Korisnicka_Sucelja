@@ -3,7 +3,8 @@ import Link from 'next/link'
 import logo from '../public/cistoca_logo.svg';
 import LoginModal from './LoginModal';
 
-const Header = () => {
+const Header = ({newPostBtn}) => {
+
   return(
 	<div className='flex flex-row justify-between'>
 		<Link href={'/'} className='flex align-middle'>
@@ -14,7 +15,7 @@ const Header = () => {
 			<NavbarLink path={'/servicePage'} linkName={'Usluge'}></NavbarLink>
 			<NavbarLink path={'/educationPage'} linkName={'Edukacija'}></NavbarLink>
 			<NavbarLink path={'/infoPage'} linkName={'Informacije'}></NavbarLink>
-			<LoginModal/>
+			<LoginModal isNewPostBtn={newPostBtn}/>
 		</div>
 	</div>
   )

@@ -1,24 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { getCurrentUser } from "../services/loginService";
 
-export default function Modal() {
+export default function PostModal({showBtn}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [chosenImg, setChosenImg] = useState('');
-  const [logged, setLogged] = useState(false);
-
-  const checkLogged = async() => {
-    await getCurrentUser ? setLogged(true) : setLogged(false);
-  }
-
-  useEffect(() => {
-    checkLogged();
-  }, [getCurrentUser])
 
   return (
     <>
-      {logged ? 
+      {showBtn ? 
       <div className="self-center mr-2">
         <button
         className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
