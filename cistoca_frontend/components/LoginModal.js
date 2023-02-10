@@ -1,5 +1,5 @@
-import { useState, useLayoutEffect } from "react";
-import { getUser, setCurrentUser, getCurrentUser } from "../services/loginService";
+import { useState, useEffect } from "react";
+import { findUser, setCurrentUser, getCurrentUser } from "../services/loginService";
 
 export default function LoginModal({isNewPostBtn}) {
   const [showModal, setShowModal] = useState(false);
@@ -7,7 +7,7 @@ export default function LoginModal({isNewPostBtn}) {
   const [logged, setLogged] = useState(false);
   const [userData, setUserData] = useState({name:null, lastname:null});
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     updateData();
   }, []);
 
@@ -22,7 +22,7 @@ export default function LoginModal({isNewPostBtn}) {
   }
 
   const handleLogin = () => {
-    let user = getUser(userData);
+    let user = findUser(userData);
     if(!user){
       setShowError(true);
       setTimeout(()=>setShowError(false), 3000);

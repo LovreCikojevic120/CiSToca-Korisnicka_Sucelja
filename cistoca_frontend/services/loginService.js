@@ -8,7 +8,7 @@ const getCurrentUser = () => {
   return JSON.parse(localStorage.getItem('currentUser'));
 }
 
-const getUser = (userData) =>  
+const findUser = (userData) =>  
   database.users.find(user => user.name == userData.name && user.lastname == userData.lastname);
 
-export {getUser, setCurrentUser, getCurrentUser};
+export {findUser, setCurrentUser, getCurrentUser};

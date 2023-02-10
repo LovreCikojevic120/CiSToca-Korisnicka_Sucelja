@@ -1,10 +1,40 @@
 import { useState } from "react";
 import Image from "next/image";
+import { getCurrentUser } from "../services/loginService";
+import { getPosts, setPosts } from "../services/postService";
 
-export default function PostModal({showBtn}) {
+export default function PostModal({showBtn, postArray, setPostArray}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
-  const [chosenImg, setChosenImg] = useState('');
+  const [newPost, setNewPost] = useState({
+    postID: postArray.length, 
+    postStreet: null, 
+    postDesc: null, 
+    postImgURL: null,
+    postOwner: getCurrentUser()
+  });
+
+  const updatePostStorage = () => {
+    let oldPostArray = getPosts();
+    if(!oldPostArray) {
+      oldPostArray = [];
+    }
+    
+    setPosts([...oldPostArray, newPost]);
+  }
+
+  const MakePost = () => {
+    setPostArray(postArray => [...postArray, newPost]);
+    setNewPost({postID: postArray.length});
+    setShowModal(false);
+    updatePostStorage();
+    updatePost('postID', getPosts().length);
+    updatePost('postOwner', getCurrentUser())
+  }
+
+  const updatePost = (propName, newValue) => {
+    setNewPost(newPost => ({...newPost, [propName]: newValue}));
+  }
 
   return (
     <>
@@ -42,10 +72,15 @@ export default function PostModal({showBtn}) {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex flex-col">
-                  <input placeholder="Ulica" className="w-2/3" onChange={(e) => console.log(e.target)}></input>
-                  <input placeholder="Opis objave" className="mt-4 w-2/3" onChange={(e) => console.log(e.target)}></input>
-                  <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => setChosenImg(URL.createObjectURL(e.target.files[0]))}></input>
-                  {chosenImg ? <Image src={chosenImg} width={300} height={300} className='self-center h-auto'></Image> : null}
+                  <input placeholder="Ulica" className="w-2/3" onChange={(e) => updatePost('postStreet', e.target.value)}></input>
+                  <input placeholder="Opis objave" className="mt-4 w-2/3" onChange={(e) => updatePost('postDesc', e.target.value)}></input>
+                  <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => {
+                    let newImg = e.target.files[0];
+                    const reader = new FileReader();
+                    reader.readAsDataURL(newImg);
+                    updatePost('postImgURL', reader.result);
+                  }}></input>
+                  {newPost.postImgURL ? <Image src={newPost.postImgURL} width={300} height={300} className='self-center h-auto'></Image> : null}
                   {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivi podaci</div> : null}
                 </div>
                 {/*footer*/}
@@ -53,7 +88,7 @@ export default function PostModal({showBtn}) {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={()=>console.log('Objavljeno')}
+                    onClick={ MakePost }
                   >
                     Objavi
                   </button>
