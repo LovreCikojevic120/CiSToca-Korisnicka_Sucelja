@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { getCurrentUser } from "../services/loginService";
-import { getPosts, setPosts } from "../services/postService";
+import { getPostStorage, setPostStorage } from "../services/postService";
 
 export default function PostModal({showBtn, postArray, setPostArray}) {
   const [showModal, setShowModal] = useState(false);
@@ -11,29 +11,36 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
     postStreet: null, 
     postDesc: null, 
     postImgURL: null,
-    postOwner: getCurrentUser()
+    postOwner: null
   });
 
+  useEffect(() => {
+    setNewPost(newPost => ({...newPost, postOwner: getCurrentUser()}));
+  }, []);
+
   const updatePostStorage = () => {
-    let oldPostArray = getPosts();
-    if(!oldPostArray) {
-      oldPostArray = [];
-    }
+    let oldPostArray = getPostStorage();
     
-    setPosts([...oldPostArray, newPost]);
+    setPostStorage([...oldPostArray, newPost]);
   }
 
   const MakePost = () => {
     setPostArray(postArray => [...postArray, newPost]);
-    setNewPost({postID: postArray.length});
-    setShowModal(false);
     updatePostStorage();
-    updatePost('postID', getPosts().length);
-    updatePost('postOwner', getCurrentUser())
+    setShowModal(false);
+    updatePost('postID', getPostStorage().length);
+    updatePost('postOwner', getCurrentUser());
+    updatePost('postImgURL', null);
   }
 
   const updatePost = (propName, newValue) => {
     setNewPost(newPost => ({...newPost, [propName]: newValue}));
+  }
+
+  const updatePostImage = (imgFile) => {
+    const reader = new FileReader();
+    reader.onload = (e) => updatePost('postImgURL', e.target.result);
+    reader.readAsDataURL(imgFile);
   }
 
   return (
@@ -74,12 +81,7 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
                 <div className="relative p-6 flex flex-col">
                   <input placeholder="Ulica" className="w-2/3" onChange={(e) => updatePost('postStreet', e.target.value)}></input>
                   <input placeholder="Opis objave" className="mt-4 w-2/3" onChange={(e) => updatePost('postDesc', e.target.value)}></input>
-                  <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => {
-                    let newImg = e.target.files[0];
-                    const reader = new FileReader();
-                    reader.readAsDataURL(newImg);
-                    updatePost('postImgURL', reader.result);
-                  }}></input>
+                  <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => updatePostImage(e.target.files[0])}></input>
                   {newPost.postImgURL ? <Image src={newPost.postImgURL} width={300} height={300} className='self-center h-auto'></Image> : null}
                   {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivi podaci</div> : null}
                 </div>

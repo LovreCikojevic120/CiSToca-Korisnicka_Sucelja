@@ -1,9 +1,10 @@
-const setPosts = (postArray) => {
+const setPostStorage = (postArray) => {
   localStorage.setItem('posts', JSON.stringify(postArray));
 }
 
-const getPosts = () => {
-  return JSON.parse(localStorage.getItem('posts'));
+const getPostStorage = () => {
+  let postStorage = JSON.parse(localStorage.getItem('posts'));
+  return !postStorage ? [] : postStorage;
 }
 
-export {setPosts, getPosts};
+export {setPostStorage, getPostStorage};
