@@ -15,43 +15,55 @@ export default function HomePage() {
   return (
     <>
       <Header/>
-      <h1>ČiSToća Split</h1>
-      <p>Obavljamo komunalnu djelatnost održavanja čistoće i odlaganja komunalnog otpada.</p>
-      <section className="mt-24">
-        <div className="bg-yellow-200 mx-72 flex flex-row">
-          <Image src={yellowImage}></Image>
-          <p>
-          Provodimo i razvijamo cjeloviti sustav gospodarenja otpadom na području svog rada
+      <section className="mt-14 flex flex-col relative">
+        <div className="flex flex-row ml-72">
+          <h1 className="font-bold text-8xl">ČiSToća&nbsp;</h1>
+          <h1 className="font-bold text-8xl text-[#1D7110]">Split</h1>
+        </div>
+        <div className="w-8/12 h-96 absolute top-5 bg-[#9DEC8F] -z-10 rounded-r-[100px]"></div>
+        <p className="text-3xl ml-72 w-1/3 mt-10 leading-9">Obavljamo komunalnu djelatnost održavanja čistoće i odlaganja komunalnog otpada.</p>
+      </section>
+
+      <section className="mt-24 text-start relative">
+        <div className="w-4/5 h-96 absolute bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[100px]"></div>
+        <div className="w-4/5 h-96 absolute top-96 right-0 bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[100px]"></div>
+        <div className="bg-yellow-200 mx-72 flex flex-row rounded-3xl items-center">
+          <Image src={yellowImage} className='px-8 py-5'></Image>
+          <p className="">
+            Provodimo i razvijamo cjeloviti sustav gospodarenja otpadom na području svog rada
           </p>
         </div>
 
-        <div className="bg-blue-500 mx-72 flex flex-row-reverse">
-          <Image src={blueImage}></Image>
+        <div className="bg-blue-500 mx-72 flex flex-row-reverse rounded-3xl items-center">
+          <Image src={blueImage} className='px-8 py-5'></Image>
           <p>
           Odvojeno skupljamo korisni otpad u spremnicima na javno-prometnim površinama i u reciklažnim dvorištima
           </p>
         </div>
 
-        <div className="bg-green-400 mx-72 flex flex-row">
-          <Image src={greenImage}></Image>
+        <div className="bg-green-400 mx-72 flex flex-row rounded-3xl items-center">
+          <Image src={greenImage} className='px-8 py-5'></Image>
           <p>
           Skupljamo i odvozimo komunalni otpad iz kućanstava i drugih korisnika usluga
           </p>
         </div>
 
-        <div className="bg-red-500 mx-72 flex flex-row-reverse">
-          <Image src={redImage}></Image>
+        <div className="bg-red-500 mx-72 flex flex-row-reverse rounded-3xl items-center">
+          <Image src={redImage} className='px-8 py-5'></Image>
           <p>
           Održavamo čistoću javno-prometnih površina (kolnika, pločnika, trgova, pothodnika, javnih stuba i prolaza)
           </p>
         </div>
       </section>
-      <section className=" my-24">
-        <Image src={trashCan} className='h-80 -ml-24'></Image>
-        <Image src={trashCan2} className='h-80'></Image>
-        <Image src={trashCan3} className='h-80 '></Image>
+
+      <section className="my-24">
+        <div>
+          <Image src={trashCan} className='h-80'></Image>
+          <Image src={trashCan2} className='h-80 absolute right-0'></Image>
+          <Image src={trashCan3} className='h-80 mt-80'></Image>
+        </div>
       </section>
-      <section className="bg-green-600">
+      <section className="bg-green-600 mx-24">
         <h1>Kratka povijest Čistoće</h1>
         <div>
           <p>
@@ -59,7 +71,7 @@ export default function HomePage() {
           rješenjem od 10. veljače 1945.godine. U to vrijeme nastala je ustanova pod nazivom "Javna čistoća" 
           koja je u trenutku osnivanja zapošljavala 2 do 3 radnika koji su radili na čišćenju grada.
           </p>
-          <Image src={historyImg1}></Image>
+          <Image src={historyImg1} className='w-auto'></Image>
         </div>
         <div>
           <p>   
@@ -78,7 +90,7 @@ export default function HomePage() {
           djelatnosti. Iste godine započela je izgradnja Doma radnika koji je otvoren 1966. godine 
           na lokaciji na kojoj se danas nalazi Upravna zgrada Društva.
           </p>
-          <Image src={historyImg2}></Image>
+          <Image src={historyImg2} className='w-auto'></Image>
         </div>
       </section>
       <Footer/>

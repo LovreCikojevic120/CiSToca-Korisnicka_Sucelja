@@ -10,7 +10,7 @@ const Header = ({newPostBtn}) => {
 		<Link href={'/'} className='flex align-middle'>
 			<Image className='ml-10 h-auto' src={logo}/>
 		</Link>
-		<div className='flex flex-row justify-evenly bg-[#9DEC8F] rounded-bl-full'>
+		<div className='flex flex-row justify-evenly bg-[#9DEC8F] rounded-bl-[100px]'>
 			<NavbarLink path={'/ocistimoGradPage'} linkName={'OčiSTimo Grad'}></NavbarLink>
 			<NavbarLink path={'/servicePage'} linkName={'Usluge'}></NavbarLink>
 			<NavbarLink path={'/educationPage'} linkName={'Edukacija'}></NavbarLink>
