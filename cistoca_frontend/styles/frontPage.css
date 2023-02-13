@@ -1,5 +1,10 @@
 .trashcan-background{
-    height: 1000px;
+    height: 800px;
+    padding: 50px 0;
+  }
+
+  .trashcan-wrapper{
+    margin: 50px 0;
   }
 
 .info-card{
@@ -11,8 +16,22 @@
 
 .history-title{
     display:flex;
+    padding: 20px 10px 50px 10px;
 }
 
 .history-background{
-    height: 1200px;
-  }
+    height: 1000px;
+    padding: 10px;
+}
+
+.history--section{
+    display:flex;
+    padding: 20px 10px 50px 10px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 23px;
+}
+
+.history--section-text{
+    padding:10px
+}

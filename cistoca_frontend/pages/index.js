@@ -58,46 +58,38 @@ export default function HomePage() {
 
       <section className="my-24">
       <div className="w-4/5 trashcan-background absolute right-0 bg-[#9DEC8F] -z-10 rounded-tr-[50%] rounded-tl-[5px] rounded-bl-[50%]"></div>
-        <div>
-          <Image src={trashCan} className='h-80'></Image>
+        <div className="trashcan-wrapper">
+          <Image src={trashCan} className='h-80 mb-[-100px] mt-50px'></Image>
           <Image src={trashCan2} className='h-80 absolute right-0'></Image>
-          <Image src={trashCan3} className='h-80 mt-80'></Image>
+          <Image src={trashCan3} className='h-80  mt-[200px] mb-50px'></Image>
         </div>
       </section>
 
       <section className="mx-24">
-      <div className="w-full history-background mx-10px absolute right-[-15px] bg-[#9DEC8F] -z-10 rounded-tr-[50%] rounded-tl-[5px] rounded-bl-[50%]"></div>
-
+      <div className="w-[90%] p-2 history-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[5px] rounded-bl-[20%]"></div>
         <div className="history-title">
           <h1 className="font-bold text-8xl">Kratka povijest&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110]">Čistoće</h1>
         </div>
-        <div>
-          <p>
+        <div className="history--section">
+          <p className="history--section-text">
           Današnja ČISTOĆA d.o.o. Split osnovana je odlukom ranijeg Narodnog odbora Općine Split, 
           rješenjem od 10. veljače 1945.godine. U to vrijeme nastala je ustanova pod nazivom "Javna čistoća" 
-          koja je u trenutku osnivanja zapošljavala 2 do 3 radnika koji su radili na čišćenju grada.
+          koja je u trenutku osnivanja zapošljavala 2 do 3 radnika koji su radili na čišćenju grada. U godini 1957. "Gradska čistoća" zapošljava veći broj radnika i uz konjsku zapregu 
+          kojom se obavlja odvoz kućnog smeća proširuje svoju djelatnost na održavanje gradskih 
+          uličnih slivnika. 
           </p>
           <Image src={historyImg1} className='w-auto'></Image>
         </div>
-        <div>
-          <p>   
-          U godini 1957. "Gradska čistoća" zapošljava veći broj radnika i uz konjsku zapregu 
-          kojom se obavlja odvoz kućnog smeća proširuje svoju djelatnost na održavanje gradskih 
-          uličnih slivnika, te čišćenje septičkih jama, uz postojeće djelatnosti čišćenja javno 
-          prometnih površina, odvoz kućnog smeća te pružanja usluga i održavanje javnih nužnika. 
+        <div className="history--section">
+          <Image src={historyImg2} className='w-auto'></Image>
+          <p className="history--section-text">
           Zabilježeno je da se 24.prosinca 1964. godine deponij sa dotadašnje lokacije na Gripama 
-          seli na Karepovac.
-          </p>
-        </div>
-        <div>
-          <p>
-          Godine 1965. uvode se prva nova specijalna vozila "smećari" na TAM-ovim šasijama, 
+          seli na Karepovac. Godine 1965. uvode se prva nova specijalna vozila "smećari" na TAM-ovim šasijama, 
           što je u tom vremenu predstavljalo nemjerljiv tehnološki pomak i olakšavalo obavljanje 
           djelatnosti. Iste godine započela je izgradnja Doma radnika koji je otvoren 1966. godine 
           na lokaciji na kojoj se danas nalazi Upravna zgrada Društva.
           </p>
-          <Image src={historyImg2} className='w-auto'></Image>
         </div>
       </section>
       <Footer/>
