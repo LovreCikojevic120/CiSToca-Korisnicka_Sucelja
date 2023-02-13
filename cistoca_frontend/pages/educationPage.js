@@ -15,9 +15,9 @@ const educationPage = () => {
     <div className="education-article--wrapper">
 
       <div className="education-article">
-        <Link href="/">
+        <Link href="/educationStoJeOtpad">
           <Image src={image1} className='px-8 py-5 education-article--image'></Image>
-        <h1 class="education-article--title">Što je otpad?</h1>
+          <h1  class="education-article--title">Što je otpad?</h1>
         </Link>
         <p class="education-article--text">Odlagališta pretrpana smećem postala su nažalost naša svakodnevica i veliki problem. No, to ne mora biti naša sudbina. Razumnim postupanjem s otpadom, najveći dio bačenih ostataka (s)tvari može se preraditi i pretvoriti u nove vrijedne i korisne tvari.</p>
         <Link  className="education-article--link" href='/educationStoJeOtpad'>🡺 Više</Link>
@@ -26,7 +26,7 @@ const educationPage = () => {
       <div className="education-article">
         <Link href="/">
           <Image src={image2} className='px-8 py-5 education-article--image'></Image>
-        <h1 class="education-article--title">Organski otpad - smeće ili korisno dobro?</h1>
+          <h1 class="education-article--title">Organski otpad - smeće ili korisno dobro?</h1>
         </Link>
         <p class="education-article--text">Kada bismo sve otpatke u našoj posudi za smeće razvrstali i odvojeno složili, ustanovili bismo da organski otpad čini čak oko 30% ukupnog otpada u kućanstvu. U organski otpad ubrajamo sav biorazgradivi otpad, npr. ostatke voća i povrća, ljuske jaja, talog kave, ostatke čaja...</p>
         <Link  className="education-article--link" href='/'>🡺 Više</Link>
@@ -35,7 +35,7 @@ const educationPage = () => {
       <div className="education-article">
         <Link href="/">
           <Image src={image3} className='px-8 py-5 education-article--image'></Image>
-        <h1 class="education-article--title">Edukacija djece</h1>
+          <h1 class="education-article--title">Edukacija djece</h1>
         </Link>
         <p class="education-article--text">Jedan od najvećih problema današnjice je problem zbrinjavanja otpada, sve veće količine otpada, koje iz godine u godinu sve više rastu. Nove tehnologije koje reproduciraju nove vrste otpada. Problemi sa deponijima, zagađivanjem okoliša, troškovima održavanja, saniranja...</p>
         <Link className="education-article--link" href='/'>🡺 Više</Link>

@@ -31,6 +31,7 @@
     font-weight: bold;
     font-size: 20px;
     margin: 20px 0;
+    width:fit-content;
 }
 
 .education-article--text{
@@ -39,4 +40,5 @@
 
 .education-article--link{
     color: #1D7110;
+    width:fit-content;
 }
