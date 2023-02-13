@@ -33,12 +33,12 @@ const educationPage = () => {
       </div>
 
       <div className="education-article">
-        <Link href="/">
+        <Link href="/educationDjeca">
           <Image src={image3} className='px-8 py-5 education-article--image'></Image>
           <h1 class="education-article--title">Edukacija djece</h1>
         </Link>
         <p class="education-article--text">Jedan od najvećih problema današnjice je problem zbrinjavanja otpada, sve veće količine otpada, koje iz godine u godinu sve više rastu. Nove tehnologije koje reproduciraju nove vrste otpada. Problemi sa deponijima, zagađivanjem okoliša, troškovima održavanja, saniranja...</p>
-        <Link className="education-article--link" href='/'>🡺 Više</Link>
+        <Link className="education-article--link" href='/educationDjeca'>🡺 Više</Link>
       </div>
 
     </div>
