@@ -30,8 +30,6 @@ const educationDjeca = () => {
         </div><br /><br />
         <p>Poznata je činjenica da navike stvorene u djetinjstvu ostaju za čitav život. Zato je iznimno važno već u najranijoj dobi djeteta stvoriti naviku da odvojeno sakupljanje postane način funkcioniranja. Organizacija sustava primarne reciklaže unutar dječjih vrtića i osnovnih škola pruža mogućnost da djeca uz pomoć odgojitelja i učitelja upoznaju potrebu i način odgovornog ponašanja prema prirodi.</p>
     </div>
-
-
     <Footer/>
     </>
   )
