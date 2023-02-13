@@ -1,0 +1,44 @@
+.education-title{
+    margin-top: 70px;
+    display:flex;
+    justify-content: center;
+}
+
+.education-article--wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.education-article{
+    width: 30%;
+    margin-top: 50px;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.education-article *{
+    font-family: Montserrat;
+}
+
+.education-article--image{
+    padding:0;
+    border-radius: 10px;
+}
+
+.education-article--title{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+    width:fit-content;
+}
+
+.education-article--text{
+    margin-bottom: 20px;
+}
+
+.education-article--link{
+    color: #1D7110;
+    width:fit-content;
+}
