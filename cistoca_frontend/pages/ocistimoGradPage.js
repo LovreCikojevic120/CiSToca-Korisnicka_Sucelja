@@ -17,9 +17,10 @@ const ocistimoGradPage = () => {
   return(
     <>
     <Header newPostBtn={setShowNewPostBtn}/>
-    <h1>OcistimoGrad</h1>
     <NewPostModal showBtn={showNewPostBtn} setPostArray={setPosts} postArray={posts}/>
-    {posts && posts.map((post) => <Card post={post} setPost={setPosts}/>)}
+    <div className="card-holder">
+      {posts && posts.map((post) => <Card post={post} setPost={setPosts}/>)}
+    </div>
     <Footer/>
     </>
   )

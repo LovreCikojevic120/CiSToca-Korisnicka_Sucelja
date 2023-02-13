@@ -14,15 +14,15 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
     postOwner: null
   });
 
-  useEffect(() => {
-    setNewPost(newPost => ({...newPost, postOwner: getCurrentUser()}));
-  }, []);
-
   const updatePostStorage = () => {
     let oldPostArray = getPostStorage();
     
     setPostStorage([...oldPostArray, newPost]);
   }
+
+  useEffect(() => {
+    setNewPost(newPost => ({...newPost, postOwner: getCurrentUser()}));
+  }, [showModal]);
 
   const MakePost = () => {
     setPostArray(postArray => [...postArray, newPost]);
@@ -46,20 +46,20 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
   return (
     <>
       {showBtn ? 
-      <div className="self-center mr-2">
+      <div className="flex justify-end my-9 mr-10">
         <button
-        className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
+        className="bg-[#1D7110] text-white text-sm w-20 h-8 rounded shadow outline-none focus:outline-none"
         type="button"
         onClick={() => setShowModal(true)}>
           Nova objava
         </button>
       </div> : 
-      <div className="self-center mr-2">
+      <div className="flex justify-end my-9 mr-10">
         <button
-        className="bg-[#1D7110] text-white active:bg-[#1D7110] text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
+        className=" bg-gray-400 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
         type="button"
         onClick={() => console.log('Prijavi se')}>
-          Prijavite se
+          Nova objava
         </button>
       </div>}
       

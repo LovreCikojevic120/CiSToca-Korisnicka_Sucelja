@@ -14,13 +14,13 @@ const Card = ({post, setPost}) => {
   let currentUser = getCurrentUser();
 
   return(
-    <div>
-      <p>{post.postOwner.name} {post.postOwner.lastname}</p>
-      <h3>{post.postStreet}</h3>
-      <p>{post.postDesc}</p>
-      <Image width={300} height={300} src={post.postImgURL}></Image>
+    <div className="card-item">
+      <p className="pb-3">{post.postDesc}</p>
+      <Image width={300} height={300} alt={'card-image'} src={post.postImgURL}></Image>
+      <p className="my-3">Objavio: {post.postOwner.name} {post.postOwner.lastname}</p>
+      <h3>Ulica: {post.postStreet}</h3>
       {(currentUser && post.postOwner.name === currentUser.name && post.postOwner.lastname === currentUser.lastname) ? 
-        <button onClick={() => deletePost(post.postID)}>Delete</button> : null
+        <button onClick={() => deletePost(post.postID)} className='mt-3 bg-red-500 text-white active:bg-red-600 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none self-center'>Delete</button> : null
       }
     </div>
   )
