@@ -40,5 +40,6 @@
 
 .education-article--link{
     color: #1D7110;
+    text-decoration: underline;
     width:fit-content;
 }

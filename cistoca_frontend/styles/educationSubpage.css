@@ -6,7 +6,7 @@
 }
 
 .education-subpage-background{
-    height: 700px;
+    height: 710px;
     padding: 10px;
     margin-top: 50px;
     margin-top: 330px;
@@ -28,4 +28,13 @@
 
 .education-subpage--bulletpoints *{
     margin: 15px 0;
+}
+
+.education-subpage--organic{
+    display:inline;
+}
+
+.education-subpage--organic--beginning{
+    color: #1D7110;
+    font-weight: bolder;
 }

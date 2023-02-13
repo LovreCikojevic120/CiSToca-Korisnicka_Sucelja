@@ -24,12 +24,12 @@ const educationPage = () => {
       </div>
 
       <div className="education-article">
-        <Link href="/">
+        <Link href="/educationOrganskiOtpad">
           <Image src={image2} className='px-8 py-5 education-article--image'></Image>
           <h1 class="education-article--title">Organski otpad - smeće ili korisno dobro?</h1>
         </Link>
         <p class="education-article--text">Kada bismo sve otpatke u našoj posudi za smeće razvrstali i odvojeno složili, ustanovili bismo da organski otpad čini čak oko 30% ukupnog otpada u kućanstvu. U organski otpad ubrajamo sav biorazgradivi otpad, npr. ostatke voća i povrća, ljuske jaja, talog kave, ostatke čaja...</p>
-        <Link  className="education-article--link" href='/'>🡺 Više</Link>
+        <Link className="education-article--link" href='/educationOrganskiOtpad'>🡺 Više</Link>
       </div>
 
       <div className="education-article">
