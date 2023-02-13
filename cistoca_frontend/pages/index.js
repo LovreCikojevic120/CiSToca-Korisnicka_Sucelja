@@ -29,28 +29,28 @@ export default function HomePage() {
         <div className="w-4/5 h-96 absolute top-96 right-0 bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[100px]"></div>
         <div className="bg-[#f7fa6190] mx-72 flex flex-row rounded-3xl items-center my-7">
           <Image src={yellowImage} className='px-8 py-5'></Image>
-          <p className="yellowCard">
+          <p className="info-card">
             Provodimo i razvijamo cjeloviti sustav gospodarenja otpadom na području svog rada
           </p>
         </div>
 
         <div className="bg-[#0247f790] mx-72 flex flex-row-reverse rounded-3xl items-center my-7">
           <Image src={blueImage} className='px-8 py-5'></Image>
-          <p>
+          <p className="info-card">
           Odvojeno skupljamo korisni otpad u spremnicima na javno-prometnim površinama i u reciklažnim dvorištima
           </p>
         </div>
 
         <div className="bg-[#05BD2D90] mx-72 flex flex-row rounded-3xl items-center my-7">
           <Image src={greenImage} className='px-8 py-5'></Image>
-          <p>
+          <p className="info-card">
           Skupljamo i odvozimo komunalni otpad iz kućanstava i drugih korisnika usluga
           </p>
         </div>
 
         <div className="bg-[#871a1a90] mx-72 flex flex-row-reverse rounded-3xl items-center my-7">
           <Image src={redImage} className='px-8 py-5'></Image>
-          <p>
+          <p className="info-card">
           Održavamo čistoću javno-prometnih površina (kolnika, pločnika, trgova, pothodnika, javnih stuba i prolaza)
           </p>
         </div>
