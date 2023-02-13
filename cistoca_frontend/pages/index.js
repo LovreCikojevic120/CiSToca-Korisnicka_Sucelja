@@ -24,31 +24,31 @@ export default function HomePage() {
         <p className="text-3xl ml-72 w-1/3 mt-10 leading-9">Obavljamo komunalnu djelatnost održavanja čistoće i odlaganja komunalnog otpada.</p>
       </section>
 
-      <section className="mt-24 text-start relative">
+      <section className="mt-24 text-start relative height-1000">
         <div className="w-4/5 h-96 absolute bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[100px]"></div>
         <div className="w-4/5 h-96 absolute top-96 right-0 bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[100px]"></div>
-        <div className="bg-yellow-200 mx-72 flex flex-row rounded-3xl items-center">
+        <div className="bg-[#f7fa6190] mx-72 flex flex-row rounded-3xl items-center my-7">
           <Image src={yellowImage} className='px-8 py-5'></Image>
-          <p className="">
+          <p className="yellowCard">
             Provodimo i razvijamo cjeloviti sustav gospodarenja otpadom na području svog rada
           </p>
         </div>
 
-        <div className="bg-blue-500 mx-72 flex flex-row-reverse rounded-3xl items-center">
+        <div className="bg-[#0247f790] mx-72 flex flex-row-reverse rounded-3xl items-center my-7">
           <Image src={blueImage} className='px-8 py-5'></Image>
           <p>
           Odvojeno skupljamo korisni otpad u spremnicima na javno-prometnim površinama i u reciklažnim dvorištima
           </p>
         </div>
 
-        <div className="bg-green-400 mx-72 flex flex-row rounded-3xl items-center">
+        <div className="bg-[#05BD2D90] mx-72 flex flex-row rounded-3xl items-center my-7">
           <Image src={greenImage} className='px-8 py-5'></Image>
           <p>
           Skupljamo i odvozimo komunalni otpad iz kućanstava i drugih korisnika usluga
           </p>
         </div>
 
-        <div className="bg-red-500 mx-72 flex flex-row-reverse rounded-3xl items-center">
+        <div className="bg-[#871a1a90] mx-72 flex flex-row-reverse rounded-3xl items-center my-7">
           <Image src={redImage} className='px-8 py-5'></Image>
           <p>
           Održavamo čistoću javno-prometnih površina (kolnika, pločnika, trgova, pothodnika, javnih stuba i prolaza)
@@ -57,6 +57,7 @@ export default function HomePage() {
       </section>
 
       <section className="my-24">
+      <div className="w-4/5 trashcan-background absolute right-0 bg-[#9DEC8F] -z-10 rounded-tr-[50%] rounded-tl-[5px] rounded-bl-[50%]"></div>
         <div>
           <Image src={trashCan} className='h-80'></Image>
           <Image src={trashCan2} className='h-80 absolute right-0'></Image>
