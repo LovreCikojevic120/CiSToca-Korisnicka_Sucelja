@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-24">
-      <div className="w-[90%] p-2 history-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[5px] rounded-bl-[20%]"></div>
+        <div className="w-[90%] p-2 history-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[5px] rounded-bl-[20%]"></div>
         <div className="history-title">
           <h1 className="font-bold text-8xl">Kratka povijest&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110]">Čistoće</h1>

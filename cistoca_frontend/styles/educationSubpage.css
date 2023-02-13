@@ -1,0 +1,31 @@
+.education-return{
+    margin-left: 30px;
+    font-size: 20px;
+    color: #1D7110;
+    text-decoration: underline;
+}
+
+.education-subpage-background{
+    height: 700px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-top: 330px;
+    right:0;
+}
+
+.education-subpage--wrapper{
+    margin: 100px 100px 0 100px;
+}
+
+.education-subpage--wrapper *{
+    font-size: 20px;
+}
+
+.education-subpage--subtitle{
+    margin: 60px 0 20px 0;
+    font-size: 40px;
+}
+
+.education-subpage--bulletpoints *{
+    margin: 15px 0;
+}
