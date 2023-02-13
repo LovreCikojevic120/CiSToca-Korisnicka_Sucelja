@@ -2,31 +2,33 @@ import Link from "next/link";
 
 const Footer = () => {
   return(
-    <footer className="flex flex-row justify-around">
-      <div>
-        <h4>Radno vrijeme</h4>
-        <p>
-          Od ponedjeljka do petka<br/>
-          7:30 - 14:30 sati<br/>
-          (odmor 10:00 - 10:30 sati)<br/>
-          na adresi Put Mostina 49, Split
+    <footer className="flex flex-row justify-around footer">
+      <div className="w-[90%] footer-background absolute bg-[#9DEC8F80] -z-10 rounded-[10px]"></div>
+      <div className="footer-section">
+        <h4 className="footer-title">Radno vrijeme</h4>
+        <p className="footer-text">
+        <p>Od ponedjeljka do petka</p>
+          <p>7:30 - 14:30 sati</p>
+          <p>na adresi Put Mostina 49, Split</p>
         </p>
       </div>
-      <div>
-        <h4>Kontakt telefon</h4>
-        <p>
-          Info telefon: 0800 0021<br/>
+      <div className="footer-section">
+        <h4 className="footer-title">Kontakt telefon</h4>
+        <p className="footer-text">
+          <p>Info telefon: 0800 0021</p>
 
-          Operativna služba: 021/323-740<br/>
+          <p>Operativna služba: 021/323-740</p>
 
-          Komercijalni sektor: 021/323-736
+          <p>Komercijalni sektor: 021/323-736</p>
         </p>
       </div>
-      <div className="flex flex-col">
-        <h4>Linkovi</h4>
-        <Link href='/servicePage'>Usluge</Link>
-        <Link href='/educationPage'>Edukacija</Link>
-        <Link href='/infoPage'>Informacije</Link>
+      <div className="flex flex-col footer-section">
+        <h4 className="footer-title">Linkovi</h4>
+        <div className="footer-text">
+          <Link  className="footer-link" href='/servicePage'>Usluge</Link>
+          <Link  className="footer-link" href='/educationPage'>Edukacija</Link>
+          <Link  className="footer-link" href='/infoPage'>Informacije</Link>
+        </div>
       </div>
     </footer>
   )
