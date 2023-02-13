@@ -48,7 +48,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="bg-[#871a1a90] mx-72 flex flex-row-reverse rounded-3xl items-center my-7">
+        <div className="bg-[#871a1a99] mx-72 flex flex-row-reverse rounded-3xl items-center my-7">
           <Image src={redImage} className='px-8 py-5'></Image>
           <p className="info-card">
           Održavamo čistoću javno-prometnih površina (kolnika, pločnika, trgova, pothodnika, javnih stuba i prolaza)
@@ -64,8 +64,14 @@ export default function HomePage() {
           <Image src={trashCan3} className='h-80 mt-80'></Image>
         </div>
       </section>
-      <section className="bg-green-600 mx-24">
-        <h1>Kratka povijest Čistoće</h1>
+
+      <section className="mx-24">
+      <div className="w-full history-background mx-10px absolute right-[-15px] bg-[#9DEC8F] -z-10 rounded-tr-[50%] rounded-tl-[5px] rounded-bl-[50%]"></div>
+
+        <div className="history-title">
+          <h1 className="font-bold text-8xl">Kratka povijest&nbsp;</h1>
+          <h1 className="font-bold text-8xl text-[#1D7110]">Čistoće</h1>
+        </div>
         <div>
           <p>
           Današnja ČISTOĆA d.o.o. Split osnovana je odlukom ranijeg Narodnog odbora Općine Split, 

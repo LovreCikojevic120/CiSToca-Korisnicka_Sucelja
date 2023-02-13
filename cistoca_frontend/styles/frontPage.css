@@ -6,4 +6,13 @@
     font-family: Montserrat;
     font-weight: 500;
     font-size: large;
+    padding:10px;
 }
+
+.history-title{
+    display:flex;
+}
+
+.history-background{
+    height: 1200px;
+  }
