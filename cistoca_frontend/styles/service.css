@@ -1,7 +1,7 @@
 .service-article{
     width: 30%;
     margin-top: 50px;
-    height: 200px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,4 +15,51 @@
 
 .service--text{
     font-size: 20px;
+    display:inline;
+}
+
+.service--text-bold{
+    font-weight: 600;
+    display:inline;
+}
+
+.odvoz-title{
+    text-align: center;
+    margin:50px 0;
+}
+
+.odvoz-title-component{
+    display:inline;
+}
+
+.odvoz--link-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.odvoz--link{
+    font-size: 30px;
+    color: #1D7110;
+    text-decoration: underline;
+}
+
+.odvoz--table-title{
+    font-size: 40px;
+    margin: 100px 0 0 40px;
+    color: #1D7110;
+    font-weight: bolder;
+}
+
+.odvoz--table-head{
+    background-color: #1D711020;
+    border-bottom:#1D7110 3px solid;
+}
+
+.odvoz--table-head *{
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.odvoz--table-body *{
+    font-size: 18px;
 }
