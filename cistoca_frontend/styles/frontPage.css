@@ -41,6 +41,13 @@
     margin:0 auto;
 }
 
+@media only screen and (min-width: 1600px){
+    .trashcan-wrapper{
+        max-width:1500px;
+        margin: 0 auto;
+    }
+}
+
 .info-card{
     font-family: Montserrat;
     font-weight: 500;
@@ -52,12 +59,17 @@
     margin: 0 20px;
 }
 
+@media only screen and (min-width: 1400px){
+    .history{
+        max-width:1300px;
+        margin: 0 auto;
+    }
+  }
+
 .history-title{
     display:flex;
     padding: 20px 10px 50px 10px;
 }
-
-
 
 @media only screen and (max-width: 450px){
     .history-title *{
@@ -109,6 +121,13 @@
     max-width: 50%;
     margin: 10px auto;
     border-radius: 10px;
+}
+
+@media only screen and (min-width: 1400px){
+    .frontpage-card{
+        max-width:1300px;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 600px){
