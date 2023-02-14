@@ -21,7 +21,8 @@ const serviceOdvoz = () => {
             <a className="odvoz--link" href="#pujanke">🡻 Pujanke-Sućidar</a>
         </div>
     </div>
-    
+
+    <div className="odvoz-table-wrapper">
     <h2 className="odvoz--table-title" id="varos">Varoš-Meje</h2>
     <div class="flex flex-col">
         <div class="overflow-x-auto">
@@ -44,7 +45,7 @@ const serviceOdvoz = () => {
                         7 puta tjedno (svakodnevno)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢ Domovinskog rata <br/> ⪢ Lička <br/> ⪢ Gundulićeva <br/> ⪢ Starčevićeva <br/> ⪢ Ujevićeva
+                    ⪢Domovinskog rata <br/> ⪢Lička <br/> ⪢Gundulićeva <br/> ⪢Starčevićeva <br/> ⪢Ujevićeva
                     </td>
                     </tr>
                     <tr class="bg-[#1D711020] border-b">
@@ -52,7 +53,7 @@ const serviceOdvoz = () => {
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢ Put Skalica <br/> ⪢ Table
+                    ⪢Put Skalica <br/> ⪢Table
                     </td>
                     </tr>
                 </tbody>
@@ -84,7 +85,7 @@ const serviceOdvoz = () => {
                         7 puta tjedno (svakodnevno)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢ Domovinskog rata <br/> ⪢ Lička <br/> ⪢ Gundulićeva <br/> ⪢ Starčevićeva <br/> ⪢ Ujevićeva
+                    ⪢Domovinskog rata <br/> ⪢Lička <br/> ⪢Gundulićeva <br/> ⪢Starčevićeva <br/> ⪢Ujevićeva
                     </td>
                     </tr>
                     <tr class="bg-[#1D711020] border-b">
@@ -92,7 +93,7 @@ const serviceOdvoz = () => {
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢ Put Skalica <br/> ⪢ Table
+                    ⪢Put Skalica <br/> ⪢Table
                     </td>
                     </tr>
                     <tr class="bg-white border-b">
@@ -100,7 +101,7 @@ const serviceOdvoz = () => {
                         2 puta tjedno (ponedjeljak, petak)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢ Zajčeva <br/> ⪢ Manuš
+                    ⪢Zajčeva <br/> ⪢Manuš
                     </td>
                     </tr>
                 </tbody>
@@ -118,29 +119,29 @@ const serviceOdvoz = () => {
                 <table class="min-w-full">
                 <thead class="odvoz--table-head">
                     <tr>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-5 py-4 text-left">
                         Dana u tjednu
                     </th>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-5 py-4 text-left">
                         Ulice
                     </th>
                     </tr>
                 </thead>
                 <tbody  class="odvoz--table-body">
                     <tr class="bg-white border-b">
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
                         7 puta tjedno (svakodnevno)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢ Domovinskog rata <br/> ⪢ Ujevićeva
+                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
+                    ⪢Domovinskog rata <br/> ⪢Ujevićeva
                     </td>
                     </tr>
                     <tr class="bg-[#1D711020] border-b">
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢ Put Skalica <br/> ⪢ Table
+                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
+                    ⪢Put Skalica <br/> ⪢Table
                     </td>
                     </tr>
                 </tbody>
@@ -149,7 +150,7 @@ const serviceOdvoz = () => {
             </div>
         </div>
     </div>
-
+    </div>
 
 
     <Footer/>
