@@ -24,13 +24,13 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
     setNewPost(newPost => ({...newPost, postOwner: getCurrentUser()}));
 
     if(showModal) document.body.style.overflow = "hidden";
-    else if(!showModal) document.body.style.overflow = 'visible';
   }, [showModal]);
 
   const MakePost = () => {
     setPostArray(postArray => [...postArray, newPost]);
     updatePostStorage();
     setShowModal(false);
+    document.body.style.overflow = 'visible';
     updatePost('postID', getPostStorage().length);
     updatePost('postOwner', getCurrentUser());
     updatePost('postImgURL', null);
@@ -71,7 +71,7 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
         onClick={handleError}>
           Nova objava
         </button>
-        {showError ? <div className="font-thin text-xs text-red-600 mt-1 absolute -bottom-5 right-7">Prijavite se</div> : <div>&nbsp;</div>}
+        {showError ? <div className="font-thin text-xs text-red-600 mt-1 absolute -bottom-5 right-7">Prijavite se</div> : null}
       </div>}
       
       {showModal ? (
@@ -108,7 +108,10 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => {
+                      setShowModal(false);
+                      document.body.style.overflow = 'visible';
+                    }}
                   >
                     Odustani
                   </button>
