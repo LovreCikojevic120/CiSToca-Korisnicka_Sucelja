@@ -7,8 +7,8 @@ const serviceRecycle = () => {
     <>
     <Header/>
     <div className="education-title">
-          <h1 className="font-bold text-8xl">Reciklažno &nbsp;</h1>
-          <h1 className="font-bold text-8xl text-[#1D7110]">dvorište</h1>
+          <h1 className="font-bold text-8xl recycle-title">Reciklažno&nbsp;</h1>
+          <h1 className="font-bold text-8xl text-[#1D7110] recycle-title"> dvorište</h1>
         </div>
     <Link  className="education-return" href='/service'>🡸 Povratak na usluge</Link>
     <div className="w-[95%] p-2 education-subpage-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[20%] rounded-bl-[5px]"></div>

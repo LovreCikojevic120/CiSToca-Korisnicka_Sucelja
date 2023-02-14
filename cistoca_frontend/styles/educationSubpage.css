@@ -59,11 +59,18 @@
 .education-subpage--wrapper{
     max-width: 1800px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .education-subpage--subtitle{
     margin: 100px auto 30px auto;
     text-align: center;
+}
+
+@media only screen and (max-width: 2000px){
+    .education-subpage--wrapper{
+        max-width: 80%;
+    }
 }
 
 @media only screen and (max-width: 1100px){
@@ -80,26 +87,11 @@
     .education-article--text{
         margin-bottom: 10px;
     }
-    .education-subpage--bulletpoints h1{
-        /* margin-top: 100px; */
-    }
-}
-
-@media only screen and (max-width: 500px){
-    .education-subpage--bulletpoints h1{
-        /* margin-top: 150px; */
-    }
 }
 
 @media only screen and (max-width: 400px){
     .education-subpage--bulletpoints{
         width:90%;
         max-width: unset;
-    }
-}
-
-@media only screen and (max-width: 321px){
-    .education-subpage--bulletpoints h1{
-        /* margin-top: 200px; */
     }
 }
