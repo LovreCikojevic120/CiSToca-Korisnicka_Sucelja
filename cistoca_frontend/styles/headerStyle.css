@@ -6,6 +6,8 @@
   top:0;
   z-index: 10;
   background-color: white;
+  height: 100px;
+  border-bottom:1px groove black;
 }
 
 .header-image{
@@ -29,7 +31,7 @@
 
 .header-link {
   position: relative;
-  margin-right: 50px;
+  margin:0 25px;
   white-space: nowrap;
 }
 
@@ -115,7 +117,7 @@
   padding-top: 120px;
   margin-left: -50px;
   height: 110vh;
-  width: 100vw;
+  width: 105vw;
   transform: translate(-150%);
   display: flex;
   flex-direction: column;
@@ -179,10 +181,24 @@
     width: 100%;
     z-index: 10;
   }
+
+  .hamburger .menu-items{
+    width: 110vw;
+    height: 120vh;
+  }
 }
 
 @media only screen and (max-width: 570px){
   .header-image-hamburger{
     display: none;
+  }
+
+  .hamburger{
+    justify-content: space-between;
+  }
+
+  .hamburger .menu-items{
+    width: 120vw;
+    padding-left: 20px;
   }
 }

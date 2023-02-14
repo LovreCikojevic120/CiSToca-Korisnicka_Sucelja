@@ -22,6 +22,9 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
 
   useEffect(() => {
     setNewPost(newPost => ({...newPost, postOwner: getCurrentUser()}));
+
+    if(showModal) document.body.style.overflow = "hidden";
+    else if(!showModal) document.body.style.overflow = 'visible';
   }, [showModal]);
 
   const MakePost = () => {
@@ -43,6 +46,13 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
     reader.readAsDataURL(imgFile);
   }
 
+  const handleError = () => {
+    setShowError(true);
+    setTimeout(() => {
+      setShowError(false);
+    }, 3000);
+  }
+
   return (
     <>
       {showBtn ? 
@@ -54,13 +64,14 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
           Nova objava
         </button>
       </div> : 
-      <div className="flex justify-end my-9 mr-10">
+      <div className="flex flex-col items-end my-9 mr-10 justify-start relative">
         <button
         className=" bg-gray-400 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
         type="button"
-        onClick={() => console.log('Prijavi se')}>
+        onClick={handleError}>
           Nova objava
         </button>
+        {showError ? <div className="font-thin text-xs text-red-600 mt-1 absolute -bottom-5 right-7">Prijavite se</div> : <div>&nbsp;</div>}
       </div>}
       
       {showModal ? (
