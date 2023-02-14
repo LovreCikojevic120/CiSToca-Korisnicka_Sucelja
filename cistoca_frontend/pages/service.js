@@ -37,8 +37,8 @@ const service = () => {
       </div>
 
 
-          <h1 className="font-bold text-8xl text-[#1D7110] education-subpage--subtitle">Čistoća d.o.o. Split:</h1>
           <div className="education-subpage--bulletpoints">
+          <h1 className="font-bold text-8xl text-[#1D7110] education-subpage--subtitle">Čistoća d.o.o. Split:</h1>
               <div className="education-subpage--bulletpoints">
                   <p>⪢ provodi i razvija cjeloviti sustav gospodarenja otpadom na području svog rada</p>
                   <p>⪢ odvojeno skuplja korisni otpad u spremnicima na javno-prometnim površinama i u reciklažnim dvorištima</p>

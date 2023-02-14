@@ -41,7 +41,65 @@
 
 @media only screen and (max-width: 600px){
     .education-subpage--subtitle{
-        font-size: 20px;
+        font-size: 30px;
         margin-top: 50px;
+    }
+}
+
+.education-subpage--text{
+    max-width: 1000px;
+    margin: 100px auto 0 auto;
+}
+
+.education-subpage--bulletpoints{
+    margin: 0 auto;
+    max-width: 65%;
+}
+
+.education-subpage--wrapper{
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.education-subpage--subtitle{
+    margin: 100px auto 30px auto;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1100px){
+    .education-subpage--text{
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .education-article--image{
+        width: 100%;
+        height: fit-content;
+    }
+    .education-article--text{
+        margin-bottom: 10px;
+    }
+    .education-subpage--bulletpoints h1{
+        /* margin-top: 100px; */
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .education-subpage--bulletpoints h1{
+        /* margin-top: 150px; */
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .education-subpage--bulletpoints{
+        width:90%;
+        max-width: unset;
+    }
+}
+
+@media only screen and (max-width: 321px){
+    .education-subpage--bulletpoints h1{
+        /* margin-top: 200px; */
     }
 }
