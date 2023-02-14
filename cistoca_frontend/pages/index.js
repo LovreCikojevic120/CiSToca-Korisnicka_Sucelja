@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Header/>
-      <section className="mt-14 flex flex-col relative page-section-1">
+      <section className="mt-14 relative page-section-1">
         <div className="flex flex-row page-title">
           <h1 className="font-bold text-8xl">ČiSToća&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110]">Split</h1>
