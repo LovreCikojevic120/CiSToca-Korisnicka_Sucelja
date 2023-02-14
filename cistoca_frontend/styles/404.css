@@ -14,7 +14,7 @@
 }
 
 .title-404{
-  margin: 5% 0;
+  margin: 50px 5px;
   text-align: center;
   line-height: 0;
   display: flex;
@@ -25,14 +25,35 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 1072px){
+@media only screen and (max-width: 1083px){
   .title-404 h1{
     font-size: 80px;
+  }
+  .title-404{
+    margin: 80px 5px;
+  }
+}
+
+@media only screen and (max-width: 905px){
+  .title-404 h1{
+    font-size: 70px;
+  }
+}
+
+@media only screen and (max-width: 793px){
+  .title-404{
+    margin: 50px 5px;
   }
 }
 
 @media only screen and (max-width: 512px){
   .title-404 h1{
     font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 395px){
+  .title-404{
+    margin: 30px 5px;
   }
 }
