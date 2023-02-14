@@ -7,8 +7,8 @@ const educationOrganskiOtpad = () => {
     <>
     <Header/>
     <div className="education-title">
-          <h1 className="font-bold text-8xl">Organski&nbsp;</h1>
-          <h1 className="font-bold text-8xl text-[#1D7110]">otpad</h1>
+          <h1 className="font-bold text-8xl organic-title">Organski&nbsp;</h1>
+          <h1 className="font-bold text-8xl text-[#1D7110] organic-title organic-title-bottom">otpad</h1>
         </div>
     <Link  className="education-return" href='/education'>🡸 Povratak na edukaciju</Link>
     <div className="w-[95%] p-2 education-subpage-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[20%] rounded-bl-[5px]"></div>

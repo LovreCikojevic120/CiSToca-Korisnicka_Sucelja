@@ -105,7 +105,7 @@
 }
 
 @media only screen and (max-width: 900px){
-    .otpad-title-bottom{
+    .otpad-title-bottom, .organic-title-bottom, .djeca-title-bottom{
         margin-bottom: 30px;
     }
 }
@@ -113,5 +113,41 @@
 @media only screen and (max-width: 455px){
     .otpad-title{
         font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 670px){
+    .organic-title{
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    .organic-title{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 345px){
+    .organic-title{
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    .djeca-title{
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .djeca-title{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .djeca-title{
+        font-size: 40px;
     }
 }
