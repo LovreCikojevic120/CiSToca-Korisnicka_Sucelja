@@ -38,3 +38,10 @@
     color: #1D7110;
     font-weight: bolder;
 }
+
+@media only screen and (max-width: 600px){
+    .education-subpage--subtitle{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}

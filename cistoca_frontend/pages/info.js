@@ -40,7 +40,7 @@ const info = () => {
         </div>
         <div className="info-text-wrapper">
           <p className="info-text info-text-first">E-mail </p>
-          <p className="info-text">⪢ piks@cisto.ca</p>
+          <p className="info-text">⪢ cis@to.ca</p>
         </div>
       </div>
     
