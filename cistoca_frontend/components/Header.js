@@ -16,29 +16,23 @@ const Header = ({newPostBtn}) => {
               <span class="line line3"></span>
             </div>  
           <div class="logo">
-						<Image className='header-image' src={logo}/>
+						<Link href={'/'} className='flex align-middle'>
+						<Image className='w-auto' src={logo}/>
+						</Link>
           </div>
           <div className='menu-items'>
-						<li>
-							<Link href={'/ocistimoGradPage'} className='header-link'>OčiSTimo Grad</Link>
-						</li>
-						<li>
-							<Link href={'/educationPage'} className='header-link'>Edukacija</Link>
-						</li>
-						<li>
-							<Link href={'/servicePage'} className='header-link'>Usluge</Link>
-						</li>
-						<li>
-							<Link href={'/infoPage'} className='header-link-hamburger'>Informacije</Link>
-						</li>
+						<Link href={'/ocistimoGradPage'} className=''>OčiSTimo Grad</Link>
+						<Link href={'/servicePage'} className=''>Usluge</Link>
+						<Link href={'/educationPage'} className=''>Edukacija</Link>
+						<Link href={'/infoPage'} className=''>Informacije</Link>
 					</div>
         </div>
       </div> 
-		<Link href={'/'} className='flex align-middle'>
 		<div className='header-image-container'>
+			<Link href={'/'} className='flex align-middle'>
 			<Image className='header-image' src={logo}/>
+			</Link>
 		</div>
-		</Link>
 		<div className='header-links'>
 			<Link href={'/ocistimoGradPage'} className='header-link'>OčiSTimo Grad</Link>
 			<Link href={'/servicePage'} className='header-link'>Usluge</Link>

@@ -35,3 +35,9 @@
 .history--section-text{
     padding:10px
 }
+
+@media only screen and (max-width: 900px){
+    .page-title h1{
+        font-size: 70px;
+    }
+}
