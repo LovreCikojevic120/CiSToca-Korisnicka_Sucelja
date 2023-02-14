@@ -6,6 +6,7 @@ import '../styles/footer.css'
 import '../styles/404.css'
 import '../styles/education.css'
 import '../styles/educationSubpage.css'
+import '../styles/service.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />

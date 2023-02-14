@@ -1,58 +1,54 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const servicePage = () => {
   return(
     <>
     <Header/>
-    <div>
-      provodi i razvija cjeloviti sustav gospodarenja otpadom na području svog rada
-      odvojeno skuplja korisni otpad u spremnicima na javno-prometnim površinama i u reciklažnim dvorištima
-      skuplja i odvozi komunalni otpad iz kućanstava i drugih korisnika usluga
-      održava čistoću javno-prometnih površina (kolnika, pločnika, trgova, pothodnika, javnih stuba i prolaza)
-      provodi trajnu komunikaciju s javnošću
+    <div className="education-title">
+          <h1 className="font-bold text-8xl text-[#1D7110]">Usluge</h1>
+        </div>
+        
+    <div className="service-article--wrapper">
+      <div className="service-article">
+        <div>
+          <Link href="/educationStoJeOtpad">
+            <h1  class="education-subpage--organic education-subpage--organic--beginning">Odlagalište otpada</h1>
+          </Link>
+          <p class="education-subpage--organic"> je građevina namijenjena odlaganju otpada na površinu ili pod zemlju (podzemno odlagalište), uključujući:interno odlagalište otpada.</p>
+        </div>
+        <Link  className="education-article--link" href='/educationStoJeOtpad'>🡺 Više o odlagalištu otpada</Link>
+      </div>
+
+      <div className="service-article">
+        <div>
+          <Link href="/educationOrganskiOtpad">
+            <h1 class="education-subpage--organic education-subpage--organic--beginning">Reciklažno dvorište</h1>
+          </Link>
+          <p class="education-subpage--organic">  obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom.</p>
+        </div>
+        <Link className="education-article--link" href='/educationOrganskiOtpad'>🡺 Više o reciklažnom dvorištu</Link>
+      </div>
+
     </div>
-    <div>
-      Reciklažno dvorište Karepovac na lokaciji Dračevac 122, Split upisano je u očevidnik reciklažnih dvorišta pod rednim brojem REC-52 te njim upravlja Čistoća d.o.o. Split.
 
-      Gospodarenje otpadom u ovom reciklažnom dvorištu obavlja se na otvorenom i zatvorenom skladišnom prostoru te udovoljava svim uvjetima koji su propisani odredbama Pravilnika o gospodarenju otpadom.
 
-      Čistoća d.o.o. Split raspolaže s još sedam mobilnih reciklažnih dvorišta koja se, na traženje Gradskih kotara i Mjesnih odbora, raspoređuju na lokacije u gradu Splitu. 
-
-      U reciklažno dvorište Karepovac se zaprima 49 vrsta otpada koje su propisane Pravilnikom o gospodarenju otpadom.
-
-      Građevinski otpad se zaprima isključivo u jutarnjoj smjeni (od ponedjeljka do petka u vremenu 7-14 sati, subotom u vremenu 7-13 sati). Propisana količina građevinskog otpada za odlaganje za korisnika usluge je 200 kg unutar šest mjeseci.
-
-      Spremnici su jasno označeni natpisom vrste otpada za koju su namijenjeni.
-
-      Popis otpada koji se može odložiti u reciklažnom dvorištu Karepovac:
-
-      papir i karton
-      plastična ambalaža
-      metalna ambalaža
-      stakleni ambalažni otpad
-      otpadni tekstil
-      krupni (glomazni) otpad
-      jestiva ulja i masti
-      stari lijekovi
-      stare baterije i akumulatori
-      električna i elektronička oprema
-      otpadni tiskarski toneri
-      otpadne gume
-      problematični otpad iz kućanstva (detergenti, boje, tinte, ljepila, smole, otapala, kiseline, lužine, fotografske kemikalije, pesticidi, fluorescentne cijevi, otpadna ulja i masti)
-      građevni otpad iz kućanstva (mješavine betona, cigle, crijepa/pločica i keramike te izolacijski materijali)
-      
-
-      Pravo na besplatno korištenje usluga reciklažnog dvorišta Karepovac imaju sve fizičke osobe s područja grada Splita koje su korisnici usluga Čistoće d.o.o. Split.
-
-      Građani koje žele koristiti usluge reciklažnog dvorišta javljaju se osobi koja radi u reciklažnom dvorištu (poslovođa i radnik na vagi).
-
-      Poslovođa ih upoznaje s uvjetima zaprimanja otpada u reciklažno dvorište, provjerava vrstu otpada i upućuje ih radniku na vagi ako je prethodno utvrdio da je taj otpad dopušteno zaprimiti u reciklažno dvorište.
-
-      Radnik na vagi uzima od građana osobne podatke, važe otpad i unosi u Očevidnik o nastanku i tijeku otpada podatke o vrsti otpada i težini te, zajedno s poslovođom, upućuje osobu u reciklažno dvorište.
-
-      Osobe koje koriste usluge reciklažnog dvorišta dužne su razvrstati otpad odvojeno po vrsti, svojstvu i agregatnom stanju u odgovarajuće spremnike te voditi računa da se slične vrste otpada ne miješaju i da ostave uredan plato oko spremnika.
+    <div className="education-subpage--wrapper">
+        <p className="education-subpage--text">Sustav upravljanja kvalitetom i okolišem primijenjen u Čistoća d.o.o. Split zasnovan je na zahtjevima međunarodne norme HRN EN ISO 9001:2009, a za cilj ima potpuno ispunjavanje zahtjeva za kvalitetom procesa i usluga te skrbi o okolišu.</p>
+        <h1 className="font-bold text-8xl text-[#1D7110] education-subpage--subtitle">Čistoća d.o.o. Split:</h1>
+        <div className="education-subpage--bulletpoints">
+            <div className="education-subpage--bulletpoints">
+                <p>⪢ provodi i razvija cjeloviti sustav gospodarenja otpadom na području svog rada</p>
+                <p>⪢ odvojeno skuplja korisni otpad u spremnicima na javno-prometnim površinama i u reciklažnim dvorištima</p>
+                <p>⪢ skuplja i odvozi komunalni otpad iz kućanstava i drugih korisnika usluga</p>
+                <p>⪢ održava čistoću javno-prometnih površina (kolnika, pločnika, trgova, pothodnika, javnih stuba i prolaza)</p>
+                <p>⪢ provodi trajnu komunikaciju s javnošću</p>
+            </div>
+        </div>
     </div>
+
+
     <Footer/>
     </>
   )
