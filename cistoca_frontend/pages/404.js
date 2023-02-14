@@ -12,7 +12,6 @@ const NotFoundPage = () => {
                     <h1 className="font-bold text-8xl text-[#1D7110]">ne postoji</h1>
                 </div>
             </div>
-            {/* <Footer/> */}
        </>
     )
 }
