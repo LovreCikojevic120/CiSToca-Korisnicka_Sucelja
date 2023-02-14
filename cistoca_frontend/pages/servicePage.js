@@ -14,21 +14,21 @@ const servicePage = () => {
       <div className="service-article">
         <div>
           <Link href="/educationStoJeOtpad">
-            <h1  class="education-subpage--organic education-subpage--organic--beginning">Odlagalište otpada</h1>
+            <h1  class="service--text education-subpage--organic education-subpage--organic--beginning">Odlagalište otpada</h1>
           </Link>
-          <p class="education-subpage--organic"> je građevina namijenjena odlaganju otpada na površinu ili pod zemlju (podzemno odlagalište), uključujući:interno odlagalište otpada.</p>
+          <p class="service--text education-subpage--organic"> je građevina namijenjena odlaganju otpada na površinu ili pod zemlju (podzemno odlagalište), uključujući:interno odlagalište otpada.</p>
         </div>
-        <Link  className="education-article--link" href='/educationStoJeOtpad'>🡺 Više o odlagalištu otpada</Link>
+        <Link  className="service--text education-article--link" href='/educationStoJeOtpad'>🡺 Više o odlagalištu otpada</Link>
       </div>
 
       <div className="service-article">
         <div>
           <Link href="/educationOrganskiOtpad">
-            <h1 class="education-subpage--organic education-subpage--organic--beginning">Reciklažno dvorište</h1>
+            <h1 class="service--text education-subpage--organic education-subpage--organic--beginning">Reciklažno dvorište</h1>
           </Link>
-          <p class="education-subpage--organic">  obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom.</p>
+          <p class="service--text education-subpage--organic">  obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom.</p>
         </div>
-        <Link className="education-article--link" href='/educationOrganskiOtpad'>🡺 Više o reciklažnom dvorištu</Link>
+        <Link className="service--text education-article--link" href='/educationOrganskiOtpad'>🡺 Više o reciklažnom dvorištu</Link>
       </div>
 
     </div>

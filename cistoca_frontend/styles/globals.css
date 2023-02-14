@@ -21,7 +21,3 @@
 *{
   font-family: source-sans-pro;
 }
-
-*::selection {
-    background-color: #DEFFE7;
-}

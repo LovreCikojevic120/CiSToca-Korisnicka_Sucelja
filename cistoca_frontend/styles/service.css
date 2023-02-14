@@ -1,7 +1,7 @@
 .service-article{
     width: 30%;
     margin-top: 50px;
-    height: 150px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,4 +11,8 @@
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+}
+
+.service--text{
+    font-size: 20px;
 }
