@@ -34,6 +34,9 @@ export default function LoginModal({isNewPostBtn}) {
 
     if(isNewPostBtn) isNewPostBtn(true);
     setCurrentUser(userData);
+
+    if(showModal) document.body.style.overflow = "hidden";
+    else if(!showModal) document.body.style.overflow = 'visible';
   }
 
   const handleLogout = () => {
