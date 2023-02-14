@@ -25,9 +25,9 @@ const Footer = () => {
       <div className="flex flex-col footer-section">
         <h4 className="footer-title">Linkovi</h4>
         <div className="footer-text">
-          <Link  className="footer-link" href='/servicePage'>Usluge</Link>
-          <Link  className="footer-link" href='/educationPage'>Edukacija</Link>
-          <Link  className="footer-link" href='/infoPage'>Informacije</Link>
+          <Link  className="footer-link" href='/service'>Usluge</Link>
+          <Link  className="footer-link" href='/education'>Edukacija</Link>
+          <Link  className="footer-link" href='/info'>Informacije</Link>
         </div>
       </div>
     </footer>

@@ -5,7 +5,7 @@ import Image from "next/image"
 import image1 from '../public/services1.jpg'
 import image2 from '../public/services2.jpg'
 
-const servicePage = () => {
+const service = () => {
   return(
     <>
     <Header/>
@@ -55,4 +55,4 @@ const servicePage = () => {
   )
 }
 
-export default servicePage;
+export default service;

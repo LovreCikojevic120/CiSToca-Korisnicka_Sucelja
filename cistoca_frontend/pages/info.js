@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const infoPage = () => {
+const info = () => {
   return(
     <>
     <Header/>
@@ -109,4 +109,4 @@ const infoPage = () => {
   )
 }
 
-export default infoPage;
+export default info;

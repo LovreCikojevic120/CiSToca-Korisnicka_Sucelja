@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { getPostStorage } from "../services/postService";
 import Card from "../components/Card";
 
-const ocistimoGradPage = () => {
+const ocistimoGrad = () => {
   const [showNewPostBtn, setShowNewPostBtn] = useState(false);
   const [posts, setPosts] = useState([]);
 
@@ -26,4 +26,4 @@ const ocistimoGradPage = () => {
   )
 }
 
-export default ocistimoGradPage;
+export default ocistimoGrad;

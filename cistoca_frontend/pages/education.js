@@ -6,7 +6,7 @@ import image1 from '../public/education1.jpg'
 import image2 from '../public/education2.jpg'
 import image3 from '../public/education3.jpg'
 
-const educationPage = () => {
+const education = () => {
   return(
     <>
     <Header/>
@@ -47,4 +47,4 @@ const educationPage = () => {
   )
 }
 
-export default educationPage;
+export default education;

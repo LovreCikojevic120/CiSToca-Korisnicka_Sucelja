@@ -21,10 +21,10 @@ const Header = ({newPostBtn}) => {
 						</Link>
           </div>
           <div className='menu-items'>
-						<Link href={'/ocistimoGradPage'} className=''>OčiSTimo Grad</Link>
-						<Link href={'/servicePage'} className=''>Usluge</Link>
-						<Link href={'/educationPage'} className=''>Edukacija</Link>
-						<Link href={'/infoPage'} className=''>Informacije</Link>
+						<Link href={'/ocistimoGrad'} className=''>OčiSTimo Grad</Link>
+						<Link href={'/service'} className=''>Usluge</Link>
+						<Link href={'/education'} className=''>Edukacija</Link>
+						<Link href={'/info'} className=''>Informacije</Link>
 					</div>
         </div>
       </div> 
@@ -34,10 +34,10 @@ const Header = ({newPostBtn}) => {
 			</Link>
 		</div>
 		<div className='header-links'>
-			<Link href={'/ocistimoGradPage'} className='header-link'>OčiSTimo Grad</Link>
-			<Link href={'/servicePage'} className='header-link'>Usluge</Link>
-			<Link href={'/educationPage'} className='header-link'>Edukacija</Link>
-			<Link href={'/infoPage'} className='header-link'>Informacije</Link>
+			<Link href={'/ocistimoGrad'} className='header-link'>OčiSTimo Grad</Link>
+			<Link href={'/service'} className='header-link'>Usluge</Link>
+			<Link href={'/education'} className='header-link'>Edukacija</Link>
+			<Link href={'/info'} className='header-link'>Informacije</Link>
 			<LoginModal isNewPostBtn={newPostBtn}/>
 		</div>
 	</div>
