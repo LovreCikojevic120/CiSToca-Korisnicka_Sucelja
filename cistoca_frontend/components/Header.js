@@ -16,6 +16,7 @@ const Header = ({newPostBtn}) => {
 						<span class="line line3"></span>
 					</div>
           <div className='menu-items'>
+						<Link href={'/'} className='header-link'>Naslovna</Link>
 						<Link href={'/ocistimoGrad'} className='header-link'>OčiSTimo Grad</Link>
 						<Link href={'/service'} className='header-link'>Usluge</Link>
 						<Link href={'/education'} className='header-link'>Edukacija</Link>
@@ -37,6 +38,7 @@ const Header = ({newPostBtn}) => {
 			</Link>
 		</div>
 		<div className='header-links'>
+			<Link href={'/'} className='header-link'>Naslovna</Link>
 			<Link href={'/ocistimoGrad'} className='header-link'>OčiSTimo Grad</Link>
 			<Link href={'/service'} className='header-link'>Usluge</Link>
 			<Link href={'/education'} className='header-link'>Edukacija</Link>

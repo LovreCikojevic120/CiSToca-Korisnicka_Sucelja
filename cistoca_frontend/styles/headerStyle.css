@@ -1,7 +1,11 @@
 .header-main-div{
   display: flex;
   flex-direction: row;
-  justify-items: space-between;
+  justify-content: space-between;
+  position: sticky;
+  top:0;
+  z-index: 10;
+  background-color: white;
 }
 
 .header-image{
@@ -20,10 +24,13 @@
   flex-direction: row;
   background-color: #9DEC8F;
   border-bottom-left-radius: 100px;
+  align-items: center;
 }
 
 .header-link {
   position: relative;
+  margin-right: 50px;
+  white-space: nowrap;
 }
 
 .header-link::before {
@@ -107,8 +114,8 @@
 .hamburger .menu-items {
   padding-top: 120px;
   margin-left: -50px;
-  height: 100vh;
-  width: 50vh;
+  height: 110vh;
+  width: 100vw;
   transform: translate(-150%);
   display: flex;
   flex-direction: column;
@@ -156,10 +163,6 @@
   transform: rotate(-45deg);
 }
 
-.hamburger input[type="checkbox"]:checked ~ .header-image-hamburger {
-  display: none;
- }
-
 @media only screen and (max-width: 900px){
   .header-links{
     display: none;
@@ -175,5 +178,11 @@
     align-items:center;
     width: 100%;
     z-index: 10;
+  }
+}
+
+@media only screen and (max-width: 570px){
+  .header-image-hamburger{
+    display: none;
   }
 }
