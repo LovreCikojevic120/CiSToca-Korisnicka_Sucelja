@@ -24,14 +24,15 @@ export default function PostModal({showBtn, setPostArray}) {
     let owner = getCurrentUser();
     if(!owner)return;
 
-    setNewPost(newPost => ({...newPost, postOwner: owner.username}));
-    setNewPost(newPost => ({...newPost, postID: getPostStorage().length + 1}));
+    updatePost('postOwner', owner.username);
+    updatePost('postID', getPostStorage().length + 1);
+    updatePost('postImgURL', null);
 
     if(showModal) document.body.style.overflow = "hidden";
   }, [showModal]);
 
   const MakePost = () => {
-    if(Object.values(newPost).some(value => value===null ? true : false)){
+    if(Object.values(newPost).some(value => value === null ? true : false)){
       handleError();
       return;
     }
@@ -40,9 +41,6 @@ export default function PostModal({showBtn, setPostArray}) {
     updatePostStorage();
     setShowModal(false);
     document.body.style.overflow = 'visible';
-    updatePost('postID', getPostStorage().length);
-    updatePost('postOwner', getCurrentUser());
-    updatePost('postImgURL', null);
   }
 
   const updatePost = (propName, newValue) => {
@@ -51,7 +49,10 @@ export default function PostModal({showBtn, setPostArray}) {
 
   const updatePostImage = (imgFile) => {
     const reader = new FileReader();
-    reader.onload = (e) => updatePost('postImgURL', e.target.result);
+    reader.onload = (e) => {
+      e.preventDefault();
+      updatePost('postImgURL', e.target.result);
+    };
     reader.readAsDataURL(imgFile);
   }
 
