@@ -43,7 +43,7 @@ export default function HomePage() {
         </div>
 
         <div className="bg-[#05BD2D90] rounded-3xl items-center frontpage-card">
-          <Image src={greenImage} alt='info-image' className='px-8 py-5 frontpage-card-image'></Image>
+          <Image src={greenImage} alt='info-image' className='frontpage-card-image'></Image>
           <p className="info-card">
           Skupljamo i odvozimo komunalni otpad iz kućanstava i drugih korisnika usluga
           </p>
