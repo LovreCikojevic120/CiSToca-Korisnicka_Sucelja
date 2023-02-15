@@ -21,7 +21,7 @@ const service = () => {
             <Image src={image1} className='px-8 py-5 education-article--image'></Image>
             <h1  class="education-article--title">Raspored odvoza komunalnog otpada po blokovima</h1>
           </Link>
-          <p class="education-article--text">Dokument je zbog prirode posla podložan promjenama. Ažurirani raspored se nalazi kod poslovođa Operativne službe. Sve veće promjene rasporeda biti će unesene u Dokument.</p>
+          <p className="education-article--text">Dokument je zbog prirode posla podložan promjenama. Ažurirani raspored se nalazi kod poslovođa Operativne službe. Sve veće promjene rasporeda biti će unesene u Dokument.</p>
           <Link  className="education-article--link" href='/serviceOdvoz'>🡺 Više</Link>
         </div>
 

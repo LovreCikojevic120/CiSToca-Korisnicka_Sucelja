@@ -59,37 +59,37 @@ const serviceOdvoz = () => {
 
     <div className="odvoz-table-wrapper">
     <h2 className="odvoz--table-title" id="varos">Varoš-Meje</h2>
-    <div class="flex flex-col">
-        <div class="overflow-x-auto">
-            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
-                <table class="min-w-full">
-                <thead class="odvoz--table-head">
+    <div className="flex flex-col">
+        <div className="overflow-x-auto">
+            <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+                <table className="min-w-full">
+                <thead className="odvoz--table-head">
                     <tr>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                         Dana u tjednu
                     </th>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                         Ulice
                     </th>
                     </tr>
                 </thead>
-                <tbody  class="odvoz--table-body">
-                    <tr class="bg-white border-b">
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <tbody  className="odvoz--table-body">
+                    <tr className="bg-white border-b">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                         7 puta tjedno (svakodnevno)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                     {filteredList1.map((item, index) => (
                         <div key={index}>{item}</div>
                         ))}
                     </td>
                     </tr>
-                    <tr class="bg-[#1D711020] border-b">
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <tr className="bg-[#1D711020] border-b">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                     {filteredList2.map((item, index) => (
                         <div key={index}>{item}</div>
                         ))}
@@ -103,47 +103,47 @@ const serviceOdvoz = () => {
     </div>
 
     <h2 className="odvoz--table-title" id="lucac">Lučac-Manuš</h2>
-    <div class="flex flex-col">
-        <div class="overflow-x-auto">
-            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
-                <table class="min-w-full">
-                <thead class="odvoz--table-head">
+    <div className="flex flex-col">
+        <div className="overflow-x-auto">
+            <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+                <table className="min-w-full">
+                <thead className="odvoz--table-head">
                     <tr>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                         Dana u tjednu
                     </th>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                         Ulice
                     </th>
                     </tr>
                 </thead>
-                <tbody  class="odvoz--table-body">
-                    <tr class="bg-white border-b">
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                <tbody  className="odvoz--table-body">
+                    <tr className="bg-white border-b">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                         7 puta tjedno (svakodnevno)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                     {filteredList1.map((item, index) => (
                         <div key={index}>{item}</div>
                         ))}
                     </td>
                     </tr>
-                    <tr class="bg-[#1D711020] border-b">
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <tr className="bg-[#1D711020] border-b">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                     {filteredList2.map((item, index) => (
                         <div key={index}>{item}</div>
                         ))}
                     </td>
                     </tr>
-                    <tr class="bg-white border-b">
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <tr className="bg-white border-b">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                         2 puta tjedno (ponedjeljak, petak)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                     {filteredList1.map((item, index) => (
                         <div key={index}>{item}</div>
                         ))}
@@ -157,37 +157,37 @@ const serviceOdvoz = () => {
     </div>
 
     <h2 className="odvoz--table-title" id="pujanke">Pujanke-Sućidar</h2>
-    <div class="flex flex-col">
-        <div class="overflow-x-auto">
-            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
-                <table class="min-w-full">
-                <thead class="odvoz--table-head">
+    <div className="flex flex-col">
+        <div className="overflow-x-auto">
+            <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div className="overflow-hidden">
+                <table className="min-w-full">
+                <thead className="odvoz--table-head">
                     <tr>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-5 py-4 text-left">
+                    <th scope="col" className="text-sm font-medium text-gray-900 px-5 py-4 text-left">
                         Dana u tjednu
                     </th>
-                    <th scope="col" class="text-sm font-medium text-gray-900 px-5 py-4 text-left">
+                    <th scope="col" className="text-sm font-medium text-gray-900 px-5 py-4 text-left">
                         Ulice
                     </th>
                     </tr>
                 </thead>
-                <tbody  class="odvoz--table-body">
-                    <tr class="bg-white border-b">
-                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
+                <tbody  className="odvoz--table-body">
+                    <tr className="bg-white border-b">
+                    <td className="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
                         7 puta tjedno (svakodnevno)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
+                    <td className="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
                     {filteredList2.map((item, index) => (
                         <div key={index}>{item}</div>
                         ))}
                     </td>
                     </tr>
-                    <tr class="bg-[#1D711020] border-b">
-                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
+                    <tr className="bg-[#1D711020] border-b">
+                    <td className="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
+                    <td className="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
                     {filteredList1.map((item, index) => (
                         <div key={index}>{item}</div>
                         ))}
@@ -200,8 +200,6 @@ const serviceOdvoz = () => {
         </div>
     </div>
     </div>
-
-
     <Footer/>
     </>
   )

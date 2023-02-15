@@ -6,7 +6,7 @@ export default function LoginModal({isNewPostBtn}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [logged, setLogged] = useState(false);
-  const [userData, setUserData] = useState({name:null, lastname:null});
+  const [userData, setUserData] = useState({username:null, password:null});
   const [showConfirm, setShowConfirm] = useState(false);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function LoginModal({isNewPostBtn}) {
     setLogged(false);
 
     if(isNewPostBtn) isNewPostBtn(false);
-    setUserData({name:null, lastname:null});
+    setUserData({username:null, password:null});
     setCurrentUser(null);
     setShowConfirm(false);
   }
@@ -55,8 +55,8 @@ export default function LoginModal({isNewPostBtn}) {
       <div className="self-center mr-2">
         <div>
             <div className="login-modal--users-name">
-              <p>Prijavlje ste kao </p>
-              <div className="login-modal--users-name-name">{userData.name} {userData.lastname}</div>
+              <p>Korisnik</p>
+              <div className="login-modal--users-name-name">{userData.username}</div>
             </div>
             <button
             className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
@@ -97,17 +97,16 @@ export default function LoginModal({isNewPostBtn}) {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex flex-col">
-                  <input placeholder="Ime" className="w-2/3" onChange={(e) => setUserData({name: e.target.value, lastname:userData.lastname})}></input>
-                  <input placeholder="Prezime" className="mt-4 w-2/3" onChange={(e) => setUserData({name: userData.name, lastname:e.target.value})}></input>
-                  {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivo ime ili prezime</div> : null}
+                  <input placeholder="Korisničko ime" className="w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setUserData({username: e.target.value, password:userData.password})}></input>
+                  <input placeholder="Lozinka" type='password' className="mt-4 w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setUserData({username: userData.username, password:e.target.value})}></input>
+                  {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivo korisničko ime ili lozinka</div> : null}
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={handleLogin}
-                  >
+                    onClick={handleLogin}>
                     Prijava
                   </button>
                   <button
@@ -116,8 +115,7 @@ export default function LoginModal({isNewPostBtn}) {
                     onClick={() => {
                       setShowModal(false);
                       document.body.style.overflow = 'visible';
-                    }}
-                  >
+                    }}>
                     Odustani
                   </button>
                 </div>
