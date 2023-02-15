@@ -157,7 +157,6 @@
     .frontpage-card{
         flex-direction: column;
         height: fit-content;
-        padding: 30px inherit;
     }
     .trashcan-wrapper{
         flex-direction: column;
