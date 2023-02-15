@@ -1,16 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { findUser, setCurrentUser } from "../services/loginService";
 import LogoutModal from "./LogoutModal";
 
-export default function LoginModal({isNewPostBtn, userInfo, setUserInfo}) {
+export default function LoginModal({ userInfo, setUserInfo}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [formInput, setFormInput] = useState(null);
-
-  useEffect(() => {
-    if(isNewPostBtn) isNewPostBtn(true);
-  }, []);
 
   const handleLogin = () => {
     let user = findUser(formInput);
@@ -22,15 +18,12 @@ export default function LoginModal({isNewPostBtn, userInfo, setUserInfo}) {
 
     setShowModal(false);
 
-    if(isNewPostBtn) isNewPostBtn(true);
     setCurrentUser(formInput);
     setUserInfo(formInput);
     document.body.style.overflow = 'visible';
   }
 
   const handleLogout = () => {
-    if(isNewPostBtn) isNewPostBtn(false);
-
     setUserInfo(() => null);
     setCurrentUser(null);
     setShowConfirm(false);

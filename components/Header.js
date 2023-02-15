@@ -18,6 +18,11 @@ const Header = ({ newPostBtn }) => {
 		setUserData(getCurrentUser());
 	}, []);
 
+	useEffect(() => {
+		if(!newPostBtn) return;
+		userData ? newPostBtn(true) : newPostBtn(false);
+	}, [userData]);
+
 	const disableScroll = () => {
 		setShowMenu(showMenu => !showMenu);
 
