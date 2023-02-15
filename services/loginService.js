@@ -9,6 +9,6 @@ const getCurrentUser = () => {
 }
 
 const findUser = (userData) =>  
-  database.users.find(user => user.name == userData.name && user.lastname == userData.lastname);
+  database.users.find(user => user.username == userData.username && user.password == userData.password);
 
 export {findUser, setCurrentUser, getCurrentUser};

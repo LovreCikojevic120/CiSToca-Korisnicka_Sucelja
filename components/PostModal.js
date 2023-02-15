@@ -7,7 +7,7 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [newPost, setNewPost] = useState({
-    postID: postArray.length, 
+    postID: null, 
     postStreet: null, 
     postDesc: null, 
     postImgURL: null,
@@ -21,7 +21,11 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
   }
 
   useEffect(() => {
-    setNewPost(newPost => ({...newPost, postOwner: getCurrentUser()}));
+    let owner = getCurrentUser();
+    if(!owner)return;
+
+    setNewPost(newPost => ({...newPost, postOwner: owner.username}));
+    setNewPost(newPost => ({...newPost, postID: getPostStorage().length + 1}));
 
     if(showModal) document.body.style.overflow = "hidden";
   }, [showModal]);
