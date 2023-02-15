@@ -137,3 +137,30 @@
         font-size: 30px;
     }
 }
+
+.odvoz--search-wrapper{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.odvoz--search-text, #odvoz--search-box{
+    display: inline;
+    font-size: 30px;
+}
+
+.odvoz--search-text{
+    color: #1D7110;
+}
+
+#odvoz--search-box{
+    border: 2px #1D7110 solid;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 380px){
+    .odvoz--search-text, #odvoz--search-box{
+        font-size: 23px;
+    }
+}

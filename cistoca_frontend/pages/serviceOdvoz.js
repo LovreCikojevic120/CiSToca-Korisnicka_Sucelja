@@ -1,8 +1,39 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { useState } from "react";
+
 
 const serviceOdvoz = () => {
+
+    const streets1 = ["⪢Domovinskog rata",
+                            "⪢Lička",
+                            "⪢Gundulićeva",
+                            "⪢Starčevićeva",
+                            "⪢Ujevićeva"];
+    const [filteredList1, setFilteredList1] = new useState(streets1);
+
+    const streets2 = ["⪢Put Skalica",
+                        "⪢Table"];
+    const [filteredList2, setFilteredList2] = new useState(streets2);
+
+    const filterBySearch = (event) => {
+        const query = event.target.value;
+        var updatedList1 = [...streets1];
+        var updatedList2 = [...streets2];
+
+        updatedList1 = updatedList1.filter((item) => {
+            return item.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+          });
+        updatedList2 = updatedList2.filter((item) => {
+            return item.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+          });
+
+        setFilteredList1(updatedList1);
+        setFilteredList2(updatedList2);
+      };
+    
+
   return(
     <>
     <Header/>
@@ -12,14 +43,18 @@ const serviceOdvoz = () => {
           <h1 className="font-bold text-6xl odvoz-title-component">po blokovima</h1>
         </div>
     <Link  className="education-return" href='/service'>🡸 Povratak na usluge</Link>
-    {/* <div className="w-[95%] p-2 education-subpage-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[20%] rounded-bl-[5px]"></div> */}
-    
+  
     <div className="education-subpage--wrapper">
         <div className="odvoz--link-wrapper">
             <a className="odvoz--link" href="#varos">🡻 Varoš-Meje</a>
             <a className="odvoz--link" href="#lucac">🡻 Lučac-Manuš</a>
             <a className="odvoz--link" href="#pujanke">🡻 Pujanke-Sućidar</a>
         </div>
+    </div>
+
+    <div className="odvoz--search-wrapper">
+        <div className="odvoz--search-text">Unesite svoju ulicu za filtriranje:&nbsp;</div>
+        <input id="odvoz--search-box" onChange={filterBySearch} />
     </div>
 
     <div className="odvoz-table-wrapper">
@@ -45,7 +80,9 @@ const serviceOdvoz = () => {
                         7 puta tjedno (svakodnevno)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢Domovinskog rata <br/> ⪢Lička <br/> ⪢Gundulićeva <br/> ⪢Starčevićeva <br/> ⪢Ujevićeva
+                    {filteredList1.map((item, index) => (
+                        <div key={index}>{item}</div>
+                        ))}
                     </td>
                     </tr>
                     <tr class="bg-[#1D711020] border-b">
@@ -53,7 +90,9 @@ const serviceOdvoz = () => {
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢Put Skalica <br/> ⪢Table
+                    {filteredList2.map((item, index) => (
+                        <div key={index}>{item}</div>
+                        ))}
                     </td>
                     </tr>
                 </tbody>
@@ -85,7 +124,9 @@ const serviceOdvoz = () => {
                         7 puta tjedno (svakodnevno)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢Domovinskog rata <br/> ⪢Lička <br/> ⪢Gundulićeva <br/> ⪢Starčevićeva <br/> ⪢Ujevićeva
+                    {filteredList1.map((item, index) => (
+                        <div key={index}>{item}</div>
+                        ))}
                     </td>
                     </tr>
                     <tr class="bg-[#1D711020] border-b">
@@ -93,7 +134,9 @@ const serviceOdvoz = () => {
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢Put Skalica <br/> ⪢Table
+                    {filteredList2.map((item, index) => (
+                        <div key={index}>{item}</div>
+                        ))}
                     </td>
                     </tr>
                     <tr class="bg-white border-b">
@@ -101,7 +144,9 @@ const serviceOdvoz = () => {
                         2 puta tjedno (ponedjeljak, petak)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    ⪢Zajčeva <br/> ⪢Manuš
+                    {filteredList1.map((item, index) => (
+                        <div key={index}>{item}</div>
+                        ))}
                     </td>
                     </tr>
                 </tbody>
@@ -133,7 +178,9 @@ const serviceOdvoz = () => {
                         7 puta tjedno (svakodnevno)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
-                    ⪢Domovinskog rata <br/> ⪢Ujevićeva
+                    {filteredList2.map((item, index) => (
+                        <div key={index}>{item}</div>
+                        ))}
                     </td>
                     </tr>
                     <tr class="bg-[#1D711020] border-b">
@@ -141,7 +188,9 @@ const serviceOdvoz = () => {
                         3 puta tjedno (ponedjeljak, srijeda, petak)
                     </td>
                     <td class="text-sm text-gray-900 font-light px-5 py-4 whitespace-nowrap">
-                    ⪢Put Skalica <br/> ⪢Table
+                    {filteredList1.map((item, index) => (
+                        <div key={index}>{item}</div>
+                        ))}
                     </td>
                     </tr>
                 </tbody>
