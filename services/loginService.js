@@ -1,4 +1,4 @@
-import database from "../../Database";
+import database from '../Database.js'
 
 const setCurrentUser = (userData) => {
   localStorage.setItem('currentUser', JSON.stringify(userData));
