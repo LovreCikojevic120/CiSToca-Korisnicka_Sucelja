@@ -10,7 +10,7 @@ const educationStoJeOtpad = () => {
           <h1 className="font-bold text-8xl otpad-title">Što je&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110] otpad-title otpad-title-bottom">otpad?</h1>
         </div>
-    <Link  className="education-return" href='/education'>🡸 Povratak na edukaciju</Link>
+    <Link  className="education-return" href='/education'>← Povratak na edukaciju</Link>
     
     <div className="education-subpage--wrapper">
         <p className="education-subpage--text">Odlagališta pretrpana smećem postala su nažalost naša svakodnevica i veliki problem. No, to ne mora biti naša sudbina. Razumnim postupanjem s otpadom, najveći dio bačenih ostataka (s)tvari može se preraditi i pretvoriti u nove vrijedne i korisne tvari. Bezuvjetna pretpostavka za takvo civilizirano postupanje s otpadom jest odvojeno sakupljanje. Odvajanjem po vrstama otpada već u kućanstvu postiže se bolja kvaliteta sekundarnih sirovina i lakša prerada.</p>

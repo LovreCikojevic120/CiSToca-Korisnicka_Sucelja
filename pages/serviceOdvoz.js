@@ -42,13 +42,13 @@ const serviceOdvoz = () => {
           <h1 className="font-bold text-6xl text-[#1D7110] odvoz-title-component">komunalnog otpada </h1>
           <h1 className="font-bold text-6xl odvoz-title-component">po blokovima</h1>
         </div>
-    <Link  className="education-return" href='/service'>🡸 Povratak na usluge</Link>
+    <Link  className="education-return" href='/service'>← Povratak na usluge</Link>
   
     <div className="education-subpage--wrapper">
         <div className="odvoz--link-wrapper">
-            <a className="odvoz--link" href="#varos">🡻 Varoš-Meje</a>
-            <a className="odvoz--link" href="#lucac">🡻 Lučac-Manuš</a>
-            <a className="odvoz--link" href="#pujanke">🡻 Pujanke-Sućidar</a>
+            <a className="odvoz--link" href="#varos">↓ Varoš-Meje</a>
+            <a className="odvoz--link" href="#lucac">↓ Lučac-Manuš</a>
+            <a className="odvoz--link" href="#pujanke">↓ Pujanke-Sućidar</a>
         </div>
     </div>
 

@@ -150,14 +150,13 @@
 .info-card{
     max-height: fit-content;
     max-width: 100%;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 @media only screen and (max-width: 1090px){
     .frontpage-card{
         flex-direction: column;
         height: fit-content;
-        padding: 30px inherit;
     }
     .trashcan-wrapper{
         flex-direction: column;
