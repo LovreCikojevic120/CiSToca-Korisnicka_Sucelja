@@ -24,13 +24,18 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
     setNewPost(newPost => ({...newPost, postOwner: getCurrentUser()}));
 
     if(showModal) document.body.style.overflow = "hidden";
-    else if(!showModal) document.body.style.overflow = 'visible';
   }, [showModal]);
 
   const MakePost = () => {
+    if(Object.values(newPost).some(value => value===null ? true : false)){
+      handleError();
+      return;
+    }
+
     setPostArray(postArray => [...postArray, newPost]);
     updatePostStorage();
     setShowModal(false);
+    document.body.style.overflow = 'visible';
     updatePost('postID', getPostStorage().length);
     updatePost('postOwner', getCurrentUser());
     updatePost('postImgURL', null);
@@ -58,20 +63,20 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
       {showBtn ? 
       <div className="flex justify-end my-9 mr-10">
         <button
-        className="bg-[#1D7110] text-white text-sm w-20 h-8 rounded shadow outline-none focus:outline-none"
+        className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={() => setShowModal(true)}>
           Nova objava
         </button>
       </div> : 
-      <div className="flex flex-col items-end my-9 mr-10 justify-start relative">
+      <div className="flex flex-col items-end my-9 mr-10 relative">
         <button
-        className=" bg-gray-400 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
+        className="bg-gray-400 text-white active:bg-red-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={handleError}>
           Nova objava
         </button>
-        {showError ? <div className="font-thin text-xs text-red-600 mt-1 absolute -bottom-5 right-7">Prijavite se</div> : <div>&nbsp;</div>}
+        {showError ? <div className="font-thin text-xs text-red-600 mt-1 absolute right-20 top-11">Prijavite se</div> : null}
       </div>}
       
       {showModal ? (
@@ -94,7 +99,7 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
                   <input placeholder="Opis objave" className="mt-4 w-2/3" onChange={(e) => updatePost('postDesc', e.target.value)}></input>
                   <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => updatePostImage(e.target.files[0])}></input>
                   {newPost.postImgURL ? <Image src={newPost.postImgURL} width={300} height={300} className='self-center h-auto'></Image> : null}
-                  {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivi podaci</div> : null}
+                  {showError ? <div className="font-thin text-xs text-red-600 mt-4">Neka polja su prazna</div> : null}
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
@@ -108,7 +113,10 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => {
+                      setShowModal(false);
+                      document.body.style.overflow = 'visible';
+                    }}
                   >
                     Odustani
                   </button>
