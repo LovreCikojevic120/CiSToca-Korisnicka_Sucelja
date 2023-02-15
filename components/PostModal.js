@@ -76,7 +76,7 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
         onClick={handleError}>
           Nova objava
         </button>
-        {showError ? <div className="font-thin text-xs text-red-600 mt-1 absolute right-20 top-11">Prijavite se</div> : null}
+        {showError ? <div className="font-thin text-s text-red-600 mt-1 absolute right-1 top-11">Potrebna je prijava!</div> : null}
       </div>}
       
       {showModal ? (
