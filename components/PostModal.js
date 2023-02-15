@@ -24,9 +24,13 @@ export default function PostModal({showBtn, setPostArray}) {
     let owner = getCurrentUser();
     if(!owner)return;
 
-    updatePost('postOwner', owner.username);
-    updatePost('postID', getPostStorage().length + 1);
-    updatePost('postImgURL', null);
+    setNewPost({
+      postID: getPostStorage().length + 1, 
+      postStreet: null, 
+      postDesc: null, 
+      postImgURL: null,
+      postOwner: owner.username
+    });
 
     if(showModal) document.body.style.overflow = "hidden";
   }, [showModal]);
@@ -111,8 +115,7 @@ export default function PostModal({showBtn, setPostArray}) {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={ MakePost }
-                  >
+                    onClick={ MakePost }>
                     Objavi
                   </button>
                   <button
@@ -121,8 +124,7 @@ export default function PostModal({showBtn, setPostArray}) {
                     onClick={() => {
                       setShowModal(false);
                       document.body.style.overflow = 'visible';
-                    }}
-                  >
+                    }}>
                     Odustani
                   </button>
                 </div>
