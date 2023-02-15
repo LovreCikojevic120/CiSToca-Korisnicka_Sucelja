@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logo from '../public/cistoca_logo.svg';
 import LoginModal from './LoginModal';
 
@@ -8,8 +8,12 @@ const Header = ({newPostBtn}) => {
 
 	const [showMenu, setShowMenu] = useState(true);
 
+	useEffect(() => {
+		document.body.style.overflow = 'visible';
+	}, []);
+
 	const disableScroll = () => {
-		setShowMenu(!showMenu);
+		setShowMenu(showMenu => !showMenu);
 
 		if(showMenu) document.body.style.overflow = 'hidden';
 		else if(!showMenu) document.body.style.overflow = 'visible';
