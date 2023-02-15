@@ -69,3 +69,16 @@
 .ocistimo-modal--input-file{
   margin-top: 25px;
 }
+
+.login-modal--users-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.login-modal--users-name-name{
+  color:#375f30;
+}

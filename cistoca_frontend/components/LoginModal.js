@@ -54,7 +54,10 @@ export default function LoginModal({isNewPostBtn}) {
       {logged ? 
       <div className="self-center mr-2">
         <div>
-            <div>{userData.name}</div>
+            <div className="login-modal--users-name">
+              <p>Prijavlje ste kao </p>
+              <div className="login-modal--users-name-name">{userData.name} {userData.lastname}</div>
+            </div>
             <button
             className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
             type="button"
