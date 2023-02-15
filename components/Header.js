@@ -2,14 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
 import logo from '../public/cistoca_logo.svg';
+import { getCurrentUser } from '../services/loginService';
 import LoginModal from './LoginModal';
 
 const Header = ({newPostBtn}) => {
 
 	const [showMenu, setShowMenu] = useState(true);
+	const [userData, setUserData] = useState(null);
 
 	useEffect(() => {
 		document.body.style.overflow = 'visible';
+		setUserData(getCurrentUser());
 	}, []);
 
 	const disableScroll = () => {
@@ -43,7 +46,7 @@ const Header = ({newPostBtn}) => {
 					</Link>
 				</div>
 				<div className='flex'>
-					<LoginModal isNewPostBtn={newPostBtn}/>
+					<LoginModal isNewPostBtn={newPostBtn} userInfo={userData} setUserInfo={setUserData}/>
 				</div>
     </div>
 		<div className='header-image-container'>
@@ -57,7 +60,7 @@ const Header = ({newPostBtn}) => {
 			<Link href={'/service'} className='header-link'>Usluge</Link>
 			<Link href={'/education'} className='header-link'>Edukacija</Link>
 			<Link href={'/info'} className='header-link'>Informacije</Link>
-			<LoginModal isNewPostBtn={newPostBtn}/>
+			<LoginModal isNewPostBtn={newPostBtn} userInfo={userData} setUserInfo={setUserData}/>
 		</div>
 	</div>
   )

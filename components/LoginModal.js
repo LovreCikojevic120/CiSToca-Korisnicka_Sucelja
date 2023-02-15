@@ -1,30 +1,30 @@
 import { useState, useEffect } from "react";
-import { findUser, setCurrentUser, getCurrentUser } from "../services/loginService";
+import { findUser, setCurrentUser } from "../services/loginService";
 import LogoutModal from "./LogoutModal";
 
-export default function LoginModal({isNewPostBtn}) {
+export default function LoginModal({isNewPostBtn, userInfo, setUserInfo}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
-  const [logged, setLogged] = useState(false);
-  const [userData, setUserData] = useState({username:null, password:null});
   const [showConfirm, setShowConfirm] = useState(false);
+  const [formInput, setFormInput] = useState(null);
 
   useEffect(() => {
     updateData();
   }, []);
 
   const updateData = () => {
-    let user = getCurrentUser();
+    let user = userInfo;
     if(!user) return;
 
-    setUserData(user);
-    setLogged(true);
+    () => setUserInfo(user);
 
     if(isNewPostBtn) isNewPostBtn(true);
   }
 
+  console.log(userInfo);
+
   const handleLogin = () => {
-    let user = findUser(userData);
+    let user = findUser(formInput);
     if(!user){
       setShowError(true);
       setTimeout(()=>setShowError(false), 3000);
@@ -32,31 +32,29 @@ export default function LoginModal({isNewPostBtn}) {
     }
 
     setShowModal(false);
-    setLogged(true);
 
     if(isNewPostBtn) isNewPostBtn(true);
-    setCurrentUser(userData);
-
+    setCurrentUser(formInput);
+    setUserInfo(formInput);
     document.body.style.overflow = 'visible';
   }
 
   const handleLogout = () => {
-    setLogged(false);
-
     if(isNewPostBtn) isNewPostBtn(false);
-    setUserData({username:null, password:null});
+
+    setUserInfo(() => null);
     setCurrentUser(null);
     setShowConfirm(false);
   }
 
   return (
     <>
-      {logged ? 
+      {userInfo ? 
       <div className="self-center mr-2">
         <div>
             <div className="login-modal--users-name">
               <p>Korisnik</p>
-              <div className="login-modal--users-name-name">{userData.username}</div>
+              <div className="login-modal--users-name-name">{userInfo.username}</div>
             </div>
             <button
             className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
@@ -66,7 +64,7 @@ export default function LoginModal({isNewPostBtn}) {
             </button>
         </div>
         {showConfirm ? 
-          <LogoutModal setLogState={setLogged} setConfirm={setShowConfirm} handler={handleLogout}/> : null
+          <LogoutModal setConfirm={setShowConfirm} handler={handleLogout}/> : null
         }
       </div> : 
       <div className="self-center mr-2">
@@ -97,8 +95,8 @@ export default function LoginModal({isNewPostBtn}) {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex flex-col">
-                  <input placeholder="Korisničko ime" className="w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setUserData({username: e.target.value, password:userData.password})}></input>
-                  <input placeholder="Lozinka" type='password' className="mt-4 w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setUserData({username: userData.username, password:e.target.value})}></input>
+                  <input placeholder="Korisničko ime" className="w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setFormInput(userInfo => ({...userInfo, username: e.target.value}))}></input>
+                  <input placeholder="Lozinka" type='password' className="mt-4 w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setFormInput(userInfo => ({...userInfo, password:e.target.value}))}></input>
                   {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivo korisničko ime ili lozinka</div> : null}
                 </div>
                 {/*footer*/}

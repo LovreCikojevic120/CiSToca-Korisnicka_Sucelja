@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getCurrentUser } from "../services/loginService";
 import { getPostStorage, setPostStorage } from "../services/postService";
 
-export default function PostModal({showBtn, postArray, setPostArray}) {
+export default function PostModal({showBtn, setPostArray}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [newPost, setNewPost] = useState({
