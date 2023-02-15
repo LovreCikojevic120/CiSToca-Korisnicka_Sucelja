@@ -27,7 +27,7 @@ const ocistimoGrad = () => {
     <div className="ocistimo-wrapper">
       <NewPostModal showBtn={showNewPostBtn} setPostArray={setPosts} postArray={posts}/>
       <div className="card-holder">
-        {posts && posts.map((post) => <Card post={post} setPost={setPosts}/>)}
+        {posts && posts.map((post) => <Card post={post} setPost={setPosts} key={post.postID}/>)}
       </div>
     </div>
     <Footer/>
