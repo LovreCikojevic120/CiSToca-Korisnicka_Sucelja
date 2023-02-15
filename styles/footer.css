@@ -33,13 +33,15 @@
 @media only screen and (max-width: 800px){
   .footer-idk{
     width:100%;
-    height: 16%;
+    height: 90px;
   }
   .footer-title, .footer-text{
     font-size: 13px;
   }
   .footer-section{
     padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   .footer-section *{
     padding: 0 8px;
@@ -49,36 +51,36 @@
 
 @media only screen and (max-width: 523px){
   .footer-idk{
-    height: 20%;
+    height: 105px;
   }
 }
 
 @media only screen and (max-width: 507.5px){
   .footer-idk{
-    height: 24%;
+    height: 125px;
   }
 }
 
 @media only screen and (max-width: 414.5px){
   .footer-idk{
-    height: 28%;
+    height: 145px;
   }
 }
 
 @media only screen and (max-width: 385.5px){
   .footer-idk{
-    height: 32%;
+    height: 165px;
   }
 }
 
 @media only screen and (max-width: 374.5px){
   .footer-idk{
-    height: 36%;
+    height: 185px;
   }
 }
 
 @media only screen and (max-width: 355.5px){
   .footer-idk{
-    height: 40%;
+    height: 205px;
   }
 }
