@@ -103,7 +103,7 @@ export default function PostModal({showBtn, postArray, setPostArray}) {
                   <input placeholder=" Opis objave" className="mt-4 w-2/3 ocistimo-modal--input" onChange={(e) => updatePost('postDesc', e.target.value)}></input>
                   <input type="file" className="ocistimo-modal--input-file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => updatePostImage(e.target.files[0])}></input>
                   {newPost.postImgURL ? <Image src={newPost.postImgURL} width={300} height={300} className='self-center h-auto'></Image> : null}
-                  {showError ? <div className="font-thin text-xs text-red-600 mt-4">Molimo popunite sva polja!</div> : null}
+                  {showError ? <div className="font-thin text-s text-red-600 mt-4">Molimo popunite sva polja!</div> : null}
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
