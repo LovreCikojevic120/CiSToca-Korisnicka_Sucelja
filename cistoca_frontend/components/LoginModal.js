@@ -35,8 +35,7 @@ export default function LoginModal({isNewPostBtn}) {
     if(isNewPostBtn) isNewPostBtn(true);
     setCurrentUser(userData);
 
-    if(showModal) document.body.style.overflow = "hidden";
-    else if(!showModal) document.body.style.overflow = 'visible';
+    document.body.style.overflow = 'visible';
   }
 
   const handleLogout = () => {
@@ -51,6 +50,7 @@ export default function LoginModal({isNewPostBtn}) {
     <>
       {logged ? 
       <div className="self-center mr-2">
+        <div>{userData.name}</div>
         <button
         className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
         type="button"
@@ -62,7 +62,10 @@ export default function LoginModal({isNewPostBtn}) {
         <button
         className="bg-[#1D7110] text-white active:bg-[#1D7110] text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
         type="button"
-        onClick={() => setShowModal(true)}>
+        onClick={() => {
+          setShowModal(true);
+          document.body.style.overflow = "hidden";
+          }}>
           Prijavi se
         </button>
       </div>}
@@ -99,7 +102,10 @@ export default function LoginModal({isNewPostBtn}) {
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => {
+                      setShowModal(false);
+                      document.body.style.overflow = 'visible';
+                    }}
                   >
                     Odustani
                   </button>
