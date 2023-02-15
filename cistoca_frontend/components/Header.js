@@ -17,16 +17,16 @@ const Header = ({newPostBtn}) => {
 
   return(
 	<div className='header-main-div'>
-		<div class="hamburger">
-        <div class="nav-container">
-					<input class="checkbox" type="checkbox" name="" id="hamburger-box" onChange={disableScroll}/>
-					<div class="hamburger-lines">
-						<span class="line line1"></span>
-						<span class="line line2"></span>
-						<span class="line line3"></span>
+		<div className="hamburger">
+        <div className="nav-container">
+					<input className="checkbox" type="checkbox" name="" id="hamburger-box" onChange={disableScroll}/>
+					<div className="hamburger-lines">
+						<span className="line line1"></span>
+						<span className="line line2"></span>
+						<span className="line line3"></span>
 					</div>
           <div className='menu-items'>
-						<Link href={'/'} className='header-link'>Naslovna</Link>
+						<Link href={'/'} className='header-link'>Naslovnica</Link>
 						<Link href={'/ocistimoGrad'} className='header-link'>OčiSTimo Grad</Link>
 						<Link href={'/service'} className='header-link'>Usluge</Link>
 						<Link href={'/education'} className='header-link'>Edukacija</Link>
@@ -35,7 +35,7 @@ const Header = ({newPostBtn}) => {
         </div>
 				<div className='header-image-hamburger'>
 					<Link href={'/'} className='flex align-middle'>
-					<Image className='header-image' src={logo}/>
+					<Image className='header-image' alt='logo image' src={logo}/>
 					</Link>
 				</div>
 				<div className='flex'>
@@ -44,11 +44,11 @@ const Header = ({newPostBtn}) => {
     </div>
 		<div className='header-image-container'>
 			<Link href={'/'} className='flex align-middle'>
-			<Image className='header-image' src={logo}/>
+			<Image className='header-image' alt='logo image' src={logo}/>
 			</Link>
 		</div>
 		<div className='header-links'>
-			<Link href={'/'} className='header-link'>Naslovna</Link>
+			<Link href={'/'} className='header-link'>Naslovnica</Link>
 			<Link href={'/ocistimoGrad'} className='header-link'>OčiSTimo Grad</Link>
 			<Link href={'/service'} className='header-link'>Usluge</Link>
 			<Link href={'/education'} className='header-link'>Edukacija</Link>
