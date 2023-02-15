@@ -20,13 +20,13 @@ export default function HomePage() {
           <h1 className="font-bold text-8xl">ČiSToća&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110]">Split</h1>
         </div>
-        <div className="w-8/12 h-96 absolute top-5 bg-[#9DEC8F] -z-10 rounded-r-[100px]"></div>
+        <div className="w-8/12 h-96 absolute top-5 bg-[#9DEC8F] -z-10 rounded-r-[100px] "></div>
         <p className="text-3xl w-1/3 mt-10 leading-9 page-subtitle">Obavljamo komunalnu djelatnost održavanja čistoće i odlaganja komunalnog otpada.</p>
       </section>
 
       <section className="mt-24 text-start relative height-1000">
         <div className="w-4/5 h-96 absolute bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[100px]"></div>
-        <div className="w-4/5 h-96 absolute top-96 right-0 bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[70px]"></div>
+        <div className="w-4/5 h-96 absolute top-96 right-0 bg-[#9DEC8F] -z-10 rounded-tr-[100px] rounded-bl-[70px] background-shape"></div>
         
         <div className="bg-[#f7fa6190] rounded-3xl items-center frontpage-card">
           <Image src={yellowImage} alt='info-image' className='px-8 py-5 frontpage-card-image'></Image>
@@ -67,7 +67,6 @@ export default function HomePage() {
       </section>
 
       <section className="history">
-        <div className="w-[90%] p-2 history-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[5px] rounded-bl-[15%]"></div>
         <div className="history-title">
           <h1 className="font-bold text-8xl">Kratka povijest&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110]">Čistoće</h1>

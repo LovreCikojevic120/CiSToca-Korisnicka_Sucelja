@@ -11,7 +11,6 @@ const educationDjeca = () => {
           <h1 className="font-bold text-8xl text-[#1D7110] djeca-title djeca-title-bottom">djece</h1>
         </div>
     <Link  className="education-return" href='/education'>🡸 Povratak na edukaciju</Link>
-    <div className="w-[95%] p-2 education-subpage-background mx-10px absolute bg-[#9DEC8F] -z-10 rounded-tr-[20%] rounded-tl-[5px] rounded-br-[20%] rounded-bl-[5px]"></div>
     
     <div className="education-subpage--wrapper">
         <p className="education-subpage--text">Jedan od najvećih problema današnjice je problem zbrinjavanja otpada, sve veće količine otpada, koje iz godine u godinu sve više rastu. Nove tehnologije koje reproduciraju nove vrste otpada. Problemi sa deponijima, zagađivanjem okoliša, troškovima održavanja, saniranja i otvaranja novih deponija toliko su narasli da je stari način ponašanja i odnosa prema otpadu jednostavno neprihvatljiv.</p>
