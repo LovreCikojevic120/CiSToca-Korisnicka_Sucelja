@@ -53,7 +53,7 @@ const serviceOdvoz = () => {
     </div>
 
     <div className="odvoz--search-wrapper">
-        <div className="odvoz--search-text">Unesite svoju ulicu za filtriranje:&nbsp;</div>
+        <div className="odvoz--search-text">Unesite svvoju ulicu za filtriranje:&nbsp;</div>
         <input id="odvoz--search-box" onChange={filterBySearch} />
     </div>
 
