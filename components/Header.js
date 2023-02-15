@@ -5,13 +5,16 @@ import logo from '../public/cistoca_logo.svg';
 import { getCurrentUser } from '../services/loginService';
 import LoginModal from './LoginModal';
 
-const Header = ({newPostBtn}) => {
+const Header = ({ newPostBtn }) => {
 
 	const [showMenu, setShowMenu] = useState(true);
 	const [userData, setUserData] = useState(null);
 
 	useEffect(() => {
 		document.body.style.overflow = 'visible';
+
+		if(userData) return;
+		
 		setUserData(getCurrentUser());
 	}, []);
 

@@ -9,19 +9,8 @@ export default function LoginModal({isNewPostBtn, userInfo, setUserInfo}) {
   const [formInput, setFormInput] = useState(null);
 
   useEffect(() => {
-    updateData();
-  }, []);
-
-  const updateData = () => {
-    let user = userInfo;
-    if(!user) return;
-
-    () => setUserInfo(user);
-
     if(isNewPostBtn) isNewPostBtn(true);
-  }
-
-  console.log(userInfo);
+  }, []);
 
   const handleLogin = () => {
     let user = findUser(formInput);
