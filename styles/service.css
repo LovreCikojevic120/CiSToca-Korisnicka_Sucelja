@@ -160,9 +160,9 @@
 
 @media only screen and (max-width: 380px){
     .odvoz--search-text, #odvoz--search-box{
-        font-size: 20px;
+        font-size: 18px;
     }
     .odvoz--search-wrapper{
-        padding: 0 5px;
+        padding: 0;
     }
 }
