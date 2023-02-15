@@ -37,6 +37,7 @@
 .education-article--image{
     padding:0;
     border-radius: 10px;
+    width: 100%;
 }
 
 .education-article--title{
@@ -48,6 +49,10 @@
 
 .education-article--text{
     margin-bottom: 20px;
+}
+
+.education-subpage--text{
+    width: 100%;
 }
 
 .education-article--link{
