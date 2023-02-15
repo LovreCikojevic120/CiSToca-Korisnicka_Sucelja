@@ -10,7 +10,7 @@ const serviceRecycle = () => {
           <h1 className="font-bold text-8xl recycle-title">Reciklažno&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110] recycle-title"> dvorište</h1>
         </div>
-    <Link  className="education-return" href='/service'>🡸 Povratak na usluge</Link>
+    <Link  className="education-return" href='/service'>← Povratak na usluge</Link>
     
     <div className="education-subpage--wrapper">
         <p className="education-subpage--text service--text service--text-bold">Reciklažno dvorište Karepovac </p>

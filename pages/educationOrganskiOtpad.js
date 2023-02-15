@@ -10,7 +10,7 @@ const educationOrganskiOtpad = () => {
           <h1 className="font-bold text-8xl organic-title">Organski&nbsp;</h1>
           <h1 className="font-bold text-8xl text-[#1D7110] organic-title organic-title-bottom">otpad</h1>
         </div>
-    <Link  className="education-return" href='/education'>🡸 Povratak na edukaciju</Link>
+    <Link  className="education-return" href='/education'>← Povratak na edukaciju</Link>
      
     <div className="education-subpage--wrapper">
         <p className="education-subpage--text">Odvojenim prikupljnjem smanjujemo volumen otpada na odlagalištima, te štedimo vodu i energiju. Odvojenim prikupljnjem smanjujemo volumen otpada na odlagalištima, te štedimo vodu i energiju. Odvojenim prikupljnjem smanjujemo volumen otpada na odlagalištima, te štedimo vodu i energiju.</p>
