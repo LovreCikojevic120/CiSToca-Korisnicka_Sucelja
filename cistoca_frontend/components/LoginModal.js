@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { findUser, setCurrentUser, getCurrentUser } from "../services/loginService";
+import LogoutModal from "./LogoutModal";
 
 export default function LoginModal({isNewPostBtn}) {
   const [showModal, setShowModal] = useState(false);
   const [showError, setShowError] = useState(false);
   const [logged, setLogged] = useState(false);
   const [userData, setUserData] = useState({name:null, lastname:null});
+  const [showConfirm, setShowConfirm] = useState(false);
 
   useEffect(() => {
     updateData();
@@ -44,19 +46,25 @@ export default function LoginModal({isNewPostBtn}) {
     if(isNewPostBtn) isNewPostBtn(false);
     setUserData({name:null, lastname:null});
     setCurrentUser(null);
+    setShowConfirm(false);
   }
 
   return (
     <>
       {logged ? 
       <div className="self-center mr-2">
-        <div>{userData.name}</div>
-        <button
-        className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
-        type="button"
-        onClick={handleLogout}>
-          Odjava
-        </button>
+        <div>
+            <div>{userData.name}</div>
+            <button
+            className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
+            type="button"
+            onClick={() => setShowConfirm(true)}>
+              Odjava
+            </button>
+        </div>
+        {showConfirm ? 
+          <LogoutModal setLogState={setLogged} setConfirm={setShowConfirm} handler={handleLogout}/> : null
+        }
       </div> : 
       <div className="self-center mr-2">
         <button
