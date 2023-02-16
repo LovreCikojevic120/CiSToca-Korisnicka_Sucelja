@@ -52,7 +52,9 @@
   margin: 0 auto;
 }
 
-
+.ocistimo-wrapper-input{
+  margin: 0 40px;
+}
 
 .modal--title{
   color: #375f30;
@@ -85,6 +87,7 @@
   .ocistimo-wrapper-input{
     flex-direction: column;
     justify-content: flex-end;
+    margin: 0;
     margin-top: 40px;
   }
 

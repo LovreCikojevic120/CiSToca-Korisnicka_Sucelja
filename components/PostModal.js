@@ -70,7 +70,7 @@ export default function PostModal({showBtn, setPostArray}) {
   return (
     <>
       {showBtn ? 
-      <div className="flex justify-end my-9 mr-10 post-modal-button">
+      <div className="flex justify-end my-9 post-modal-button">
         <button
         className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
@@ -78,7 +78,7 @@ export default function PostModal({showBtn, setPostArray}) {
           Nova objava
         </button>
       </div> : 
-      <div className="flex flex-col items-end my-9 mr-10 relative">
+      <div className="flex flex-col items-end my-9 relative">
         <button
         className="bg-gray-400 text-white active:bg-red-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"

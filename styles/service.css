@@ -146,7 +146,7 @@
 
 .odvoz--search-text, #odvoz--search-box{
     display: inline;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .odvoz--search-text{
@@ -160,7 +160,7 @@
 
 @media only screen and (max-width: 380px){
     .odvoz--search-text, #odvoz--search-box{
-        font-size: 18px;
+        font-size: 15px;
     }
     .odvoz--search-wrapper{
         padding: 0 5px;

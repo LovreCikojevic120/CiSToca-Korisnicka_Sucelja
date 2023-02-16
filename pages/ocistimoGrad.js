@@ -38,7 +38,7 @@ const ocistimoGrad = () => {
     
     <div className="ocistimo-wrapper">
       <div className="flex flex-row items-center justify-between ocistimo-wrapper-input">
-        <div className="ml-10 ocistimo-filter">
+        <div className="ocistimo-filter">
           <div className="odvoz--search-text">Unesite ulicu za filtriranje:&nbsp;</div>
           <input id='odvoz--search-box' placeholder="&nbsp;Ime ulice" onChange={(e) => filterBySearch(e)} />
         </div>
