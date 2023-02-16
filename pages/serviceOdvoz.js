@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { useState } from "react";
-import { GiMagnifyingGlass } from 'react-icons/fa';
 
 
 const serviceOdvoz = () => {
