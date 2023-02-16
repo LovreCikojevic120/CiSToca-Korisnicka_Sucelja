@@ -30,14 +30,14 @@ const database = {
       postOwner: 'Mislav'
     },
     {
-      postID: 3,
+      postID: 2,
       postStreet: 'Ulica kralja Tomislava 6', 
       postDesc: 'AAA mrzin smeće',
       postImgURL: '/services1.jpg',
       postOwner: 'Ivica'
     },
     {
-      postID: 4,
+      postID: 3,
       postStreet: 'Ulica kralja Tomislava 6', 
       postDesc: 'AAA mrzin smeće',
       postImgURL: '/services1.jpg',

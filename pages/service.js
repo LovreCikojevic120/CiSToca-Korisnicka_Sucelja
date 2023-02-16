@@ -19,18 +19,18 @@ const service = () => {
         <div className="service-article">
           <Link href="/serviceOdvoz">
             <Image src={image1} className='px-8 py-5 education-article--image'></Image>
-            <h1  class="education-article--title">Raspored odvoza komunalnog otpada po blokovima</h1>
+            <h1  className="education-article--title">Raspored odvoza komunalnog otpada po blokovima</h1>
           </Link>
-          <p class="education-article--text">Dokument je zbog prirode posla podložan promjenama. Ažurirani raspored se nalazi kod poslovođa Operativne službe. Sve veće promjene rasporeda biti će unesene u Dokument.</p>
+          <p className="education-article--text">Dokument je zbog prirode posla podložan promjenama. Ažurirani raspored se nalazi kod poslovođa Operativne službe. Sve veće promjene rasporeda biti će unesene u Dokument.</p>
           <Link  className="education-article--link" href='/serviceOdvoz'>→ Više</Link>
         </div>
 
         <div className="service-article">
           <Link href="/serviceRecycle">
             <Image src={image2} className='px-8 py-5 education-article--image'></Image>
-            <h1 class="education-article--title">Reciklažno dvorište</h1>
+            <h1 className="education-article--title">Reciklažno dvorište</h1>
           </Link>
-          <p class="education-article--text"> obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom. obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom.</p>
+          <p className="education-article--text"> obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom. obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom.</p>
           <Link className="education-article--link" href='/serviceRecycle'>→ Više</Link>
         </div>
 

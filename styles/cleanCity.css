@@ -3,16 +3,16 @@
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .card-item{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self:center;
+  justify-content: space-evenly;
   min-height: 300px;
   background-color: #9DEC8F;
-  padding: 0 10px;
+  padding: 0;
   margin: 15px 5px;
   border-radius: 15px;
   inline-size: 316px; 
@@ -25,7 +25,6 @@
   height: fit-content;
   max-height: 400px;
   margin:0;
-  border-radius: 10px;
 }
 
 .card-desc, .card-owner, .card-street{
@@ -72,15 +71,12 @@
   margin-top: 25px;
 }
 
-.login-modal--users-name{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 12px;
-  margin-right: 8px;
-}
-
 .login-modal--users-name-name{
   color:#375f30;
+  font-size: medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 4px;
 }

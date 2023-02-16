@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { findUser, setCurrentUser } from "../services/loginService";
 import LogoutModal from "./LogoutModal";
+import { FaUser } from 'react-icons/fa';
 
 export default function LoginModal({ userInfo, setUserInfo}) {
   const [showModal, setShowModal] = useState(false);
@@ -32,14 +33,11 @@ export default function LoginModal({ userInfo, setUserInfo}) {
   return (
     <>
       {userInfo ? 
-      <div className="self-center mr-2">
-        <div>
-            <div className="login-modal--users-name">
-              <p>Korisnik</p>
-              <div className="login-modal--users-name-name">{userInfo.username}</div>
-            </div>
+      <div className="self-center mr-3">
+        <div className="mb-4">
+            <div className="login-modal--users-name-name"><FaUser/>&nbsp;{userInfo.username}</div>
             <button
-            className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none mr-2"
+            className="bg-red-500 text-white active:bg-red-500 text-sm w-20 h-8 rounded shadow outline-none focus:outline-none"
             type="button"
             onClick={() => setShowConfirm(true)}>
               Odjava
