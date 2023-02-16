@@ -131,8 +131,7 @@
 
 @media only screen and (min-width: 1400px){
     .frontpage-card{
-        max-width:1300px;
-        margin: 0 auto;
+        max-width: 1000px;
     }
 }
 
