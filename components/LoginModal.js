@@ -71,14 +71,14 @@ export default function LoginModal({ userInfo, setUserInfo}) {
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">
+                  <h3 className="text-3xl font-semibold modal--title">
                     Unesite podatke za prijavu
                   </h3>
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex flex-col">
-                  <input placeholder="Korisničko ime" className="w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setFormInput(userInfo => ({...userInfo, username: e.target.value}))}></input>
-                  <input placeholder="Lozinka" type='password' className="mt-4 w-2/3 border-2 border-black rounded-lg p-1" onChange={(e) => setFormInput(userInfo => ({...userInfo, password:e.target.value}))}></input>
+                  <input placeholder="Korisničko ime" className="w-2/3 border-2 border-black rounded-lg p-1 modal--input" onChange={(e) => setFormInput(userInfo => ({...userInfo, username: e.target.value}))}></input>
+                  <input placeholder="Lozinka" type='password' className="mt-4 w-2/3 border-2 border-black rounded-lg p-1 modal--input" onChange={(e) => setFormInput(userInfo => ({...userInfo, password:e.target.value}))}></input>
                   {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivo korisničko ime ili lozinka</div> : null}
                 </div>
                 {/*footer*/}

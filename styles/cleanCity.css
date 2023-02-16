@@ -54,11 +54,11 @@
 
 
 
-.ocistimo-modal--title{
+.modal--title{
   color: #375f30;
 }
 
-.ocistimo-modal--input{
+.modal--input{
   margin: 10px 0;
   font-size: 20px;
   width: 100%;
@@ -67,7 +67,7 @@
   padding: 5px;
 }
 
-.ocistimo-modal--input-file{
+.modal--input-file{
   margin-top: 25px;
 }
 

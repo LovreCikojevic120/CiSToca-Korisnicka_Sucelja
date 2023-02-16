@@ -98,15 +98,15 @@ export default function PostModal({showBtn, setPostArray}) {
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold ocistimo-modal--title">
+                  <h3 className="text-3xl font-semibold modal--title">
                     Unesite podatke za objavu:
                   </h3>
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex flex-col">
-                  <input placeholder=" Ulica" className="w-2/3 ocistimo-modal--input" onChange={(e) => updatePost('postStreet', e.target.value)}></input>
-                  <input placeholder=" Opis objave" className="mt-4 w-2/3 ocistimo-modal--input" onChange={(e) => updatePost('postDesc', e.target.value)}></input>
-                  <input type="file" className="ocistimo-modal--input-file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => updatePostImage(e.target.files[0])}></input>
+                  <input placeholder=" Ulica" className="w-2/3 modal--input" onChange={(e) => updatePost('postStreet', e.target.value)}></input>
+                  <input placeholder=" Opis objave" className="mt-4 w-2/3 modal--input" onChange={(e) => updatePost('postDesc', e.target.value)}></input>
+                  <input type="file" className="modal--input-file" accept="image/jpeg, image/png, image/jpg" onChange={(e) => updatePostImage(e.target.files[0])}></input>
                   {newPost.postImgURL ? <Image src={newPost.postImgURL} width={300} height={300} className='self-center h-auto'></Image> : null}
                   {showError ? <div className="font-thin text-s text-red-600 mt-4">Molimo popunite sva polja!</div> : null}
                 </div>
