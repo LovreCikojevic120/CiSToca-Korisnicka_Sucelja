@@ -17,6 +17,7 @@
   border-radius: 15px;
   inline-size: 316px; 
   overflow-wrap: break-word;
+  box-shadow: 5px 5px 5px #375f3030;
 }
 
 .card-image{
