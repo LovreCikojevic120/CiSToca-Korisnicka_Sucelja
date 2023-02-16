@@ -16,6 +16,10 @@ const ocistimoGrad = () => {
     setFilterPosts(postStorage);
   }, []);
 
+  useEffect(() => {
+    setFilterPosts(posts);
+  }, [posts]);
+
   const filterBySearch = (e) => {
     const query = e.target.value;
     let updatedList = [...posts];
