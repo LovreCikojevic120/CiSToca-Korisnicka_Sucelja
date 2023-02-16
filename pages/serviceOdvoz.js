@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { useState } from "react";
+import { GiMagnifyingGlass } from 'react-icons/fa';
 
 
 const serviceOdvoz = () => {
@@ -53,8 +54,8 @@ const serviceOdvoz = () => {
     </div>
 
     <div className="odvoz--search-wrapper">
-        <div className="odvoz--search-text">Unesite svoju ulicu za filtriranje:&nbsp;</div>
-        <input id="odvoz--search-box" onChange={filterBySearch} />
+        <div className="odvoz--search-text">Unesite ulicu za filtriranje:&nbsp;</div>
+        <input id="odvoz--search-box" placeholder="&nbsp;Ime ulice" onChange={filterBySearch} />
     </div>
 
     <div className="odvoz-table-wrapper">
