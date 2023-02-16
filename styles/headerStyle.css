@@ -28,6 +28,7 @@
   border-bottom-left-radius: 100px;
   align-items: center;
   padding-left: 50px;
+  box-shadow: -1px 1px 1px 0px #1D711055;
 }
 
 .header-link {
