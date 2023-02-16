@@ -80,3 +80,22 @@
   align-items: center;
   margin-bottom: 4px;
 }
+
+@media only screen and (max-width: 950px){
+  .ocistimo-wrapper-input{
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 40px;
+  }
+
+  .ocistimo-filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .post-modal-button{
+    margin: 30px 0;
+  }
+}

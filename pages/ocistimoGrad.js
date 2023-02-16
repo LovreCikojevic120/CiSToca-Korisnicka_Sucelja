@@ -37,8 +37,8 @@ const ocistimoGrad = () => {
     <p className="education-subpage--text ocistimo-subtitle">Klikom na zelenu tipku "Nova objava", koja se nalazi dolje desno, imate mogućnost korištenja sustava. Za korištenje sustava je potrebna prijava. Stavite fotografiju smeća u gradu, te unesite ulicu kojoj je fotografija slikana i opis, a mi ćemo se pobrinuti za čišćenje!</p>
     
     <div className="ocistimo-wrapper">
-      <div className="flex flex-row items-center justify-between">
-        <div className="ml-10">
+      <div className="flex flex-row items-center justify-between ocistimo-wrapper-input">
+        <div className="ml-10 ocistimo-filter">
           <div className="odvoz--search-text">Unesite ulicu za filtriranje:&nbsp;</div>
           <input id='odvoz--search-box' placeholder="&nbsp;Ime ulice" onChange={(e) => filterBySearch(e)} />
         </div>
