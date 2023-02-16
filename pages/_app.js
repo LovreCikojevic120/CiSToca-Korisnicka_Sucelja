@@ -8,7 +8,15 @@ import '../styles/education.css'
 import '../styles/educationSubpage.css'
 import '../styles/service.css'
 import '../styles/info.css'
+import Head from 'next/head'
+
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return(
+    <>
+    <Head>
+        <title>ČiSToća</title>
+      </Head>
+     <Component {...pageProps} /></>
+  )
 }
