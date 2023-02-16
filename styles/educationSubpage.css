@@ -3,6 +3,15 @@
     font-size: 20px;
     color: #1D7110;
     text-decoration: underline;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.odvoz--link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 @media only screen and (min-width: 1500px){

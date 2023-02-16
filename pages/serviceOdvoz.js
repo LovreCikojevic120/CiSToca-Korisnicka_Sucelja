@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { useState } from "react";
+import { ImArrowDown2, ImArrowLeft2 } from "react-icons/im";
 
 
 const serviceOdvoz = () => {
@@ -42,13 +43,13 @@ const serviceOdvoz = () => {
           <h1 className="font-bold text-6xl text-[#1D7110] odvoz-title-component">komunalnog otpada </h1>
           <h1 className="font-bold text-6xl odvoz-title-component">po blokovima</h1>
         </div>
-    <Link  className="education-return" href='/service'>← Povratak na usluge</Link>
+    <Link  className="education-return" href='/service'><ImArrowLeft2/> Povratak na usluge</Link>
   
     <div className="education-subpage--wrapper">
         <div className="odvoz--link-wrapper">
-            <a className="odvoz--link" href="#varos">↓ Varoš-Meje</a>
-            <a className="odvoz--link" href="#lucac">↓ Lučac-Manuš</a>
-            <a className="odvoz--link" href="#pujanke">↓ Pujanke-Sućidar</a>
+            <a className="odvoz--link" href="#varos"><ImArrowDown2/> Varoš-Meje</a>
+            <a className="odvoz--link" href="#lucac"><ImArrowDown2/> Lučac-Manuš</a>
+            <a className="odvoz--link" href="#pujanke"><ImArrowDown2/> Pujanke-Sućidar</a>
         </div>
     </div>
 

@@ -1,9 +1,10 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
-import Image from "next/image"
-import image1 from '../public/services1.jpg'
-import image2 from '../public/services2.jpg'
+import Image from "next/image";
+import image1 from '../public/services1.jpg';
+import image2 from '../public/services2.jpg';
+import { ImArrowRight2 } from 'react-icons/im';
 
 const service = () => {
   return(
@@ -22,7 +23,7 @@ const service = () => {
             <h1  className="education-article--title">Raspored odvoza komunalnog otpada po blokovima</h1>
           </Link>
           <p className="education-article--text">Dokument je zbog prirode posla podložan promjenama. Ažurirani raspored se nalazi kod poslovođa Operativne službe. Sve veće promjene rasporeda biti će unesene u Dokument.</p>
-          <Link  className="education-article--link" href='/serviceOdvoz'>→ Više</Link>
+          <Link  className="education-article--link" href='/serviceOdvoz'><ImArrowRight2/> Više</Link>
         </div>
 
         <div className="service-article">
@@ -31,7 +32,7 @@ const service = () => {
             <h1 className="education-article--title">Reciklažno dvorište</h1>
           </Link>
           <p className="education-article--text"> obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom. obavlja se na otvorenom i zatvorenom skladišnom su propisani odredbama Pravilnika o gospodarenju otpadom.</p>
-          <Link className="education-article--link" href='/serviceRecycle'>→ Više</Link>
+          <Link className="education-article--link" href='/serviceRecycle'><ImArrowRight2/> Više</Link>
         </div>
 
       </div>
