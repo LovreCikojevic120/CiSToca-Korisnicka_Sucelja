@@ -77,7 +77,7 @@ export default function LoginModal({ userInfo, setUserInfo}) {
                 <div className="relative p-6 flex flex-col">
                   <input placeholder="Korisničko ime" className="w-2/3 border-2 border-black rounded-lg p-1 modal--input" onChange={(e) => setFormInput(userInfo => ({...userInfo, username: e.target.value}))}></input>
                   <input placeholder="Lozinka" type='password' className="mt-4 w-2/3 border-2 border-black rounded-lg p-1 modal--input" onChange={(e) => setFormInput(userInfo => ({...userInfo, password:e.target.value}))}></input>
-                  {showError ? <div className="font-thin text-xs text-red-600 mt-4">Krivo korisničko ime ili lozinka</div> : null}
+                  {showError ? <div className="font-thin text-s text-red-600 mt-4">Pogrešno korisničko ime ili lozinka</div> : null}
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
